@@ -15,11 +15,10 @@ def open_evtx(input_file):
 
             # Get the two main children of Event
             for child in root:
-
-                if "System" in child.tag:
+                tag = child.tag.rsplit("}", 1)[-1] 
+                if tag == "System":
                     system = child
-
-                elif "EventData" in child.tag:
+                elif tag in ("EventData", "UserData"):  # see point 4
                     event_data = child
 
             # -------------------------
@@ -42,14 +41,12 @@ def open_evtx(input_file):
             # -------------------------
 
             if event_data is not None:
-                event.event_data = []
+                event.event_data = {}
                 for child in event_data:
                     if "Data" in child.tag:
                         name = child.attrib.get("Name")
                         value = child.text
-                        event.event_data.append((name, value))
+                        event.event_data[name] = value
+            yield event
 
-            print(event, "\n")
 
-
-open_evtx("src\\siem\\data\\raw_logs\\security.evtx")
