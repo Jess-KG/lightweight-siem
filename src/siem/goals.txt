@@ -1,0 +1,916 @@
+LIGHTWEIGHT WINDOWS SIEM — DETECTION ROADMAP
+================================================
+
+Goal:
+Build a lightweight SIEM capable of detecting suspicious Windows activity,
+correlating related events, generating alerts, and allowing investigation.
+
+Primary detection categories:
+1. Authentication & Account Attacks
+2. Execution
+3. PowerShell
+4. Process & Parent/Child Behaviour
+5. Persistence
+6. Privilege Escalation
+7. Credential Access
+8. Discovery
+9. Lateral Movement
+10. Defense Evasion
+11. Command & Control
+12. Collection
+13. Exfiltration
+14. Malware / Security Tool Detections
+15. Account & Security Changes
+16. Multi-stage Attack Correlation
+
+
+================================================
+1. AUTHENTICATION & ACCOUNT ATTACKS
+================================================
+
+Detect:
+
+- Multiple failed logins from the same source
+- Multiple failed logins against the same account
+- Multiple failed logins against multiple accounts
+- Brute-force attacks
+- Password spraying
+- Successful login following repeated failed logins
+- Successful login after a long period of inactivity
+- Unusual logon type
+- Interactive logon by unexpected account
+- Remote interactive/RDP logon
+- Network logon
+- Explicit credential usage
+- Privileged account login
+- Disabled account attempting authentication
+- Locked account activity
+- Account created
+- Account deleted
+- Account enabled
+- Account disabled
+- Account password changed
+- Account password reset
+- User added to privileged group
+- User removed from privileged group
+- Unexpected administrator account activity
+- Guest account enabled
+- Default account activity
+- Authentication occurring across multiple hosts
+
+
+CORRELATION EXAMPLES:
+
+Failed login
++ Failed login
++ Failed login
++ Failed login
++ Successful login
+= Possible brute-force compromise
+
+
+One account
++ authenticates to many hosts
++ within a short time window
+= Possible lateral movement
+
+
+================================================
+2. PROCESS EXECUTION
+================================================
+
+Detect:
+
+- Suspicious process creation
+- Processes launched from temporary directories
+- Processes launched from user-writable directories
+- Executables launched from unusual locations
+- Suspicious command-line arguments
+- Unusual parent/child process relationships
+- Office application spawning command shells
+- Browser spawning command shells
+- Script interpreter spawning suspicious processes
+- System process spawning unusual applications
+- Unexpected SYSTEM-level process execution
+- Process execution by unusual users
+- Unsigned/suspicious executables
+- Execution of newly created files
+- Execution of files from network shares
+- Execution from removable media
+
+
+High-value process chains:
+
+WINWORD.EXE
+    -> cmd.exe
+    -> powershell.exe
+
+EXCEL.EXE
+    -> powershell.exe
+
+OUTLOOK.EXE
+    -> powershell.exe
+
+powershell.exe
+    -> cmd.exe
+
+wscript.exe
+    -> powershell.exe
+
+mshta.exe
+    -> powershell.exe
+
+rundll32.exe
+    -> suspicious DLL
+
+regsvr32.exe
+    -> suspicious DLL
+
+These should generate stronger alerts than isolated process events.
+
+
+================================================
+3. POWERSHELL
+================================================
+
+Detect:
+
+- PowerShell execution
+- Encoded PowerShell commands
+- Hidden PowerShell execution
+- PowerShell running with suspicious parameters
+- PowerShell downloading content
+- PowerShell making network connections
+- PowerShell executing scripts
+- PowerShell spawning cmd.exe
+- PowerShell spawning unusual applications
+- Suspicious PowerShell command strings
+- PowerShell executed by Office applications
+- PowerShell executed by unusual parent processes
+- PowerShell executed by unexpected users
+- Suspicious Script Block activity
+- Suspicious PowerShell logging configuration changes
+- PowerShell activity followed by network activity
+- PowerShell activity followed by persistence
+
+
+Correlation:
+
+Office application
++ PowerShell
++ network connection
+= High-confidence suspicious activity
+
+
+PowerShell
++ encoded command
++ external network connection
+= High-confidence suspicious activity
+
+
+================================================
+4. COMMAND SHELLS & SCRIPTING
+================================================
+
+Detect:
+
+- cmd.exe execution
+- wscript.exe execution
+- cscript.exe execution
+- mshta.exe execution
+- suspicious scripting engines
+- scripts executed from temporary directories
+- scripts executed from user-writable locations
+- scripts spawning network tools
+- scripts spawning PowerShell
+- scripts creating persistence
+- scripts followed by credential access
+- scripts followed by lateral movement
+
+
+================================================
+5. PERSISTENCE
+================================================
+
+Detect:
+
+- New Windows service
+- Modified Windows service
+- Suspicious service executable
+- Service running from unusual path
+- Scheduled task creation
+- Scheduled task modification
+- Scheduled task executing suspicious program
+- Scheduled task running as SYSTEM
+- Registry Run key modification
+- Registry RunOnce modification
+- Startup folder modification
+- Logon script modification
+- Suspicious startup executable
+- WMI persistence
+- WMI event subscription
+- BITS job creation
+- Suspicious DLL registration
+- Suspicious application configuration changes
+- New administrator account
+- User added to privileged group
+- Changes to authentication-related configuration
+
+
+Correlation:
+
+New service
++ suspicious executable
++ SYSTEM execution
+= Possible service-based persistence
+
+
+Registry persistence
++ suspicious executable execution
+= Possible persistence
+
+
+Scheduled task
++ unusual executable
++ SYSTEM account
+= High-confidence persistence
+
+
+================================================
+6. PRIVILEGE ESCALATION
+================================================
+
+Detect:
+
+- Unexpected privilege assignment
+- User added to Administrators
+- User added to Domain Admins
+- Suspicious service running as SYSTEM
+- Suspicious scheduled task running as SYSTEM
+- UAC-related suspicious behaviour
+- Privileged process execution
+- Privileged account creation
+- Privilege group modification
+- Suspicious executable gaining elevated execution
+- Unexpected SYSTEM process
+- Token/privilege manipulation indicators
+
+
+Correlation:
+
+Normal user
++ suspicious process
++ elevated execution
+= Possible privilege escalation
+
+
+================================================
+7. CREDENTIAL ACCESS
+================================================
+
+Detect:
+
+- Suspicious LSASS access
+- LSASS memory access
+- Credential dumping indicators
+- SAM access
+- NTDS.dit access
+- LSA Secrets access
+- Windows Credential Manager access
+- Browser credential store access
+- Suspicious access to password stores
+- Suspicious access to private keys
+- Credential-related registry access
+- Suspicious authentication material access
+- Credential dumping tools
+- Security processes being accessed by unusual programs
+
+
+Correlation:
+
+Suspicious process
++ LSASS access
+= Possible credential dumping
+
+
+Credential access
++ new authentication
++ lateral movement
+= Possible credential theft and use
+
+
+================================================
+8. DISCOVERY
+================================================
+
+Detect:
+
+ACCOUNT DISCOVERY:
+- User enumeration
+- Group enumeration
+- Domain account enumeration
+- Local account enumeration
+- Administrator group enumeration
+
+SYSTEM DISCOVERY:
+- Hostname discovery
+- OS/version discovery
+- System information discovery
+- Installed software discovery
+- Process discovery
+- Service discovery
+
+NETWORK DISCOVERY:
+- IP configuration discovery
+- ARP discovery
+- Network connection discovery
+- Remote system discovery
+- Network share discovery
+- Domain discovery
+- Workstation/server enumeration
+
+FILE DISCOVERY:
+- File and directory enumeration
+- Sensitive directory enumeration
+- Network share enumeration
+
+SECURITY DISCOVERY:
+- Security product discovery
+- Firewall discovery
+- Windows Defender discovery
+- Audit policy discovery
+- Logging configuration discovery
+
+OTHER:
+- Logged-on user discovery
+- Current user discovery
+- Environment variable discovery
+- System time discovery
+
+
+CORRELATION:
+
+whoami
++ hostname
++ ipconfig
++ net user
++ net group
++ net share
++ tasklist
+
+within a short time window
+= Possible reconnaissance/discovery activity
+
+
+================================================
+9. LATERAL MOVEMENT
+================================================
+
+Detect:
+
+- RDP authentication
+- RDP connections
+- SMB authentication
+- Remote share access
+- WMI remote execution
+- Remote service execution
+- Remote scheduled task execution
+- PsExec-like behaviour
+- Remote PowerShell
+- WinRM activity
+- Remote process creation
+- Administrative share access
+- One account accessing many hosts
+- One host authenticating to many hosts
+- New host-to-host communication
+- Suspicious privileged remote authentication
+
+
+Correlation:
+
+PC01
+    -> PC02
+    -> PC03
+    -> PC04
+
+Same account
++ short time window
+= Possible lateral movement
+
+
+Credential access
++ successful authentication
++ remote execution
+= High-confidence lateral movement
+
+
+================================================
+10. DEFENSE EVASION
+================================================
+
+Detect:
+
+- Security log cleared
+- Windows Event Log service stopped
+- Windows Event Log configuration modified
+- Audit policy modified
+- Logging disabled
+- PowerShell logging disabled/modified
+- Windows Defender disabled
+- Firewall disabled
+- Security software configuration changed
+- Security process terminated
+- Suspicious process deletion
+- Evidence/file deletion
+- Timestamp manipulation indicators
+- Suspicious executable renaming
+- Suspicious file location changes
+- Security configuration modified
+- Event log tampering
+
+
+HIGH PRIORITY:
+
+Security log cleared
+= HIGH
+
+
+Security logging disabled
+= HIGH
+
+
+Windows Defender disabled
++ suspicious process execution
+= CRITICAL
+
+
+Security tool disabled
++ credential access
+= CRITICAL
+
+
+================================================
+11. COMMAND & CONTROL
+================================================
+
+Detect:
+
+- Suspicious outbound connections
+- Unexpected process making network connection
+- PowerShell network connection
+- cmd/script interpreter network connection
+- Unusual destination IP
+- Unusual destination port
+- Repeated connections to same destination
+- Long-running suspicious connections
+- Suspicious DNS activity
+- DNS queries from unusual processes
+- Network connection immediately following suspicious execution
+- Network connection immediately following credential access
+- Network connection from a normally non-networking process
+
+
+Correlation:
+
+powershell.exe
++ suspicious command
++ external network connection
+= Possible command and control
+
+
+Suspicious process
++ repeated outbound connections
+= Possible C2
+
+
+================================================
+12. COLLECTION
+================================================
+
+Detect:
+
+- Large numbers of files accessed
+- Sensitive files accessed
+- Network share collection
+- Archive creation
+- Suspicious archive utilities
+- Clipboard access
+- Screen capture
+- File staging
+- Large file aggregation
+- Data copied to temporary directories
+- Data copied to unusual locations
+- Collection from network shares
+- Collection from user directories
+- Collection followed by network activity
+
+
+Correlation:
+
+File discovery
++ sensitive files accessed
++ archive created
+= Possible data collection
+
+
+================================================
+13. EXFILTRATION
+================================================
+
+Detect:
+
+- Large outbound data transfer
+- Archive followed by network connection
+- Sensitive files followed by outbound connection
+- Data staged before network transmission
+- Unusual destination after file collection
+- Large transfer from normally inactive host
+- Unusual process performing large outbound transfer
+
+
+Correlation:
+
+Sensitive files
++ archive creation
++ outbound network connection
+= Possible data exfiltration
+
+
+================================================
+14. MALWARE / SECURITY TOOL DETECTIONS
+================================================
+
+Detect:
+
+- Windows Defender malware detection
+- Antivirus detection
+- Endpoint security alerts
+- Suspicious file detection
+- Suspicious process detection
+- Same suspicious hash on multiple hosts
+- Same malware detection across multiple hosts
+- Malware detection followed by persistence
+- Malware detection followed by network communication
+- Malware detection followed by credential access
+- Malware detection followed by lateral movement
+
+
+Correlation:
+
+Malware detected
++ persistence
++ outbound connection
+= High-confidence compromise
+
+
+================================================
+15. WINDOWS SECURITY & CONFIGURATION CHANGES
+================================================
+
+Detect:
+
+- New user
+- Deleted user
+- Account enabled
+- Account disabled
+- Password changed
+- Password reset
+- Group membership changed
+- Administrator group changed
+- Domain Admin group changed
+- Security policy changed
+- Audit policy changed
+- Firewall configuration changed
+- Defender configuration changed
+- Event logging configuration changed
+- Service configuration changed
+- Scheduled task configuration changed
+- Registry security settings changed
+
+
+================================================
+16. HIGH-VALUE CORRELATION RULES
+================================================
+
+These should be a major focus of the SIEM.
+
+RULE 1 — BRUTE FORCE
+
+Multiple failed logins
++ same account/source
++ short time window
+= Possible brute force
+
+
+RULE 2 — BRUTE FORCE SUCCESS
+
+Multiple failed logins
++ successful login
+= Possible compromised account
+
+
+RULE 3 — PASSWORD SPRAY
+
+Failed logins
++ many different accounts
++ same source
++ short time window
+= Possible password spraying
+
+
+RULE 4 — SUSPICIOUS POWERSHELL
+
+PowerShell
++ encoded/hidden command
++ suspicious parent
+= High-risk PowerShell activity
+
+
+RULE 5 — OFFICE EXPLOITATION
+
+Office application
++ command shell
++ PowerShell/script interpreter
+= Possible malicious document execution
+
+
+RULE 6 — CREDENTIAL DUMPING
+
+Suspicious process
++ LSASS access
+= Possible credential dumping
+
+
+RULE 7 — DISCOVERY BURST
+
+Multiple discovery commands
++ same host/user
++ short time window
+= Possible reconnaissance
+
+
+RULE 8 — PERSISTENCE
+
+New service OR scheduled task OR registry persistence
++ suspicious executable
+= Possible persistence
+
+
+RULE 9 — LATERAL MOVEMENT
+
+Successful remote authentication
++ remote execution
+= Possible lateral movement
+
+
+RULE 10 — MULTI-HOST LATERAL MOVEMENT
+
+Same account
++ successful authentication to multiple hosts
++ short time window
+= Possible lateral movement
+
+
+RULE 11 — DEFENSE EVASION
+
+Security configuration change
++ suspicious process
+= Possible defense evasion
+
+
+RULE 12 — LOG TAMPERING
+
+Security log cleared
+OR event logging disabled
+= High-severity alert
+
+
+RULE 13 — C2
+
+Suspicious process
++ outbound network connection
+= Possible C2
+
+
+RULE 14 — COLLECTION
+
+File discovery
++ sensitive file access
++ archive creation
+= Possible data collection
+
+
+RULE 15 — EXFILTRATION
+
+Data collection
++ archive creation
++ unusual outbound connection
+= Possible exfiltration
+
+
+RULE 16 — ATTACK CHAIN
+
+Initial suspicious execution
+        ↓
+Discovery
+        ↓
+Credential access
+        ↓
+Persistence
+        ↓
+Lateral movement
+        ↓
+Command & control
+
+= Possible multi-stage compromise
+
+
+================================================
+17. ALERT SEVERITY
+================================================
+
+LOW:
+- Single suspicious discovery event
+- Unusual but low-confidence activity
+
+MEDIUM:
+- Multiple suspicious events
+- Discovery burst
+- Repeated failed logins
+- Suspicious PowerShell
+
+HIGH:
+- Successful login after brute force
+- Credential access
+- Persistence
+- Lateral movement
+- Security logging modification
+- Suspicious C2
+
+CRITICAL:
+- Credential dumping + lateral movement
+- Security controls disabled + suspicious execution
+- Malware + persistence + C2
+- Multi-stage attack chain
+- Confirmed compromise indicators
+
+
+================================================
+18. WHAT EACH ALERT SHOULD CONTAIN
+================================================
+
+Every alert should contain:
+
+- Alert ID
+- Alert name
+- Severity
+- Detection rule
+- MITRE ATT&CK tactic
+- MITRE ATT&CK technique
+- Timestamp
+- Host/computer
+- User/account
+- Source IP
+- Destination IP
+- Process
+- Parent process
+- Command line
+- Triggering event IDs
+- Number of related events
+- Time window
+- Detection explanation
+- Recommended investigation action
+
+
+Example:
+
+ALERT ID: ALT-00042
+NAME: Possible Credential Dumping
+SEVERITY: HIGH
+
+Host: PC01
+User: Administrator
+Process: suspicious.exe
+Technique: OS Credential Dumping
+Events: 2
+Time window: 14 seconds
+
+Reason:
+A suspicious process accessed LSASS shortly after execution.
+
+Related events:
+- Process creation
+- LSASS access
+
+Recommended action:
+Investigate process, user account, and subsequent authentication activity.
+
+
+================================================
+19. INITIAL IMPLEMENTATION PRIORITY
+================================================
+
+PHASE 1 — FOUNDATION
+
+[ ] Event collection
+[ ] Event normalisation
+[ ] Event storage
+[ ] Basic event search
+[ ] Alert data structure
+
+
+PHASE 2 — CORE DETECTIONS
+
+[ ] Failed login detection
+[ ] Brute-force detection
+[ ] Password spraying
+[ ] Suspicious PowerShell
+[ ] Suspicious process execution
+[ ] Process parent/child detection
+[ ] Account changes
+[ ] Security log clearing
+
+
+PHASE 3 — ADVANCED WINDOWS DETECTIONS
+
+[ ] Persistence
+[ ] Credential access
+[ ] Discovery
+[ ] Lateral movement
+[ ] Defense evasion
+[ ] Command & control
+[ ] Collection
+[ ] Exfiltration
+
+
+PHASE 4 — CORRELATION ENGINE
+
+[ ] Time-window correlation
+[ ] Same-user correlation
+[ ] Same-host correlation
+[ ] Source-IP correlation
+[ ] Destination-IP correlation
+[ ] Process-chain correlation
+[ ] Multi-host correlation
+[ ] Multi-stage attack correlation
+
+
+PHASE 5 — INVESTIGATION
+
+[ ] Alert details
+[ ] Related-event lookup
+[ ] Event timeline
+[ ] Search/filtering
+[ ] Host-based investigation
+[ ] User-based investigation
+[ ] Attack-chain visualisation
+
+
+================================================
+20. OVERALL GOAL
+================================================
+
+The SIEM should NOT simply answer:
+
+"What event happened?"
+
+It should eventually answer:
+
+"What is happening?"
+
+"Is it suspicious?"
+
+"Why is it suspicious?"
+
+"What other events are related?"
+
+"Which host/user/process is involved?"
+
+"What MITRE ATT&CK technique does it represent?"
+
+"Could these events be part of the same attack?"
+
+"What should the analyst investigate next?"
+
+
+The ultimate detection pipeline:
+
+RAW EVENT
+    ↓
+NORMALISE
+    ↓
+STORE
+    ↓
+CLASSIFY
+    ↓
+DETECT
+    ↓
+CORRELATE
+    ↓
+SCORE
+    ↓
+ALERT
+    ↓
+INVESTIGATE
+    ↓
+ATTACK TIMELINE

@@ -1,9 +1,0 @@
-event_id,timestamp,computer,type,provider,user,process,parent_process,command_line,source_ip,source_port,destination_ip,destination_port,destination_hostname
-1,2020-11-26 17:38:11.138458+00:00,LAPTOP-JU4M3I0E,process_created,Microsoft-Windows-Sysmon,LAPTOP-JU4M3I0E\bouss,C:\Users\Public\tools\privesc\uac\byeintegrity5-uac.exe,C:\Windows\System32\cmd.exe,byeintegrity5-uac.exe,,,,,
-11,2020-11-26 17:38:11.147604+00:00,LAPTOP-JU4M3I0E,file_created,Microsoft-Windows-Sysmon,,C:\Users\Public\tools\privesc\uac\byeintegrity5-uac.exe,,,,,,,
-12,2020-11-26 17:38:11.152273+00:00,LAPTOP-JU4M3I0E,registry_object_created,Microsoft-Windows-Sysmon,,,,,,,,,
-13,2020-11-26 17:38:11.152296+00:00,LAPTOP-JU4M3I0E,registry_value_set,Microsoft-Windows-Sysmon,,,,,,,,,
-1,2020-11-26 17:38:11.154430+00:00,LAPTOP-JU4M3I0E,process_created,Microsoft-Windows-Sysmon,LAPTOP-JU4M3I0E\bouss,C:\Windows\System32\taskhostw.exe,C:\Windows\System32\svchost.exe,taskhostw.exe $(Arg0),,,,,
-7,2020-11-26 17:38:11.170855+00:00,LAPTOP-JU4M3I0E,image_loaded,Microsoft-Windows-Sysmon,,C:\Windows\System32\taskhostw.exe,,,,,,,
-1,2020-11-26 17:38:11.175869+00:00,LAPTOP-JU4M3I0E,process_created,Microsoft-Windows-Sysmon,LAPTOP-JU4M3I0E\bouss,C:\Windows\System32\cmd.exe,C:\Windows\System32\taskhostw.exe,"""C:\windows\system32\cmd.exe""",,,,,
-12,2020-11-26 17:38:11.655964+00:00,LAPTOP-JU4M3I0E,registry_object_created,Microsoft-Windows-Sysmon,,,,,,,,,

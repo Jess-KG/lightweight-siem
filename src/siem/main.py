@@ -1,13 +1,13 @@
 from .collector.collector import open_evtx
 from .normalizer.normalizer import normalize
-from .detection.detection_v1 import detect_alerts
+from .detection.detection_v2 import detect_alerts
 import csv
 import json
 import os
 
 def main():
     print("Starting SIEM Collector...")
-    input_file = "src/siem/data/raw_logs/sysmon_uacbypass_CDSSync_schtask_hijack_byeintegrity5.evtx"
+    input_file = "src/siem/data/raw_logs/security.evtx"
 
     print(f"Opening EVTX file: {input_file}")
     events = open_evtx(input_file)
@@ -40,14 +40,16 @@ def main():
     #fetching alerts
     print("Detecting alerts...")
     alerts = detect_alerts(normalized_events)
-    if alerts is not None:
+    print("Detection complete")
+    if len(alerts) > 0:
         for alert in alerts:
             print(f"[{alert['severity'].upper()}] {alert['rule']}")
             print(f"  Time:     {alert['timestamp']}")
             print(f"  Computer: {alert['computer']}")
             print(f"  Message:  {alert['message']}")
             print()
-
+    else:
+        print("No alerts detected")
 
 def store_in_csv(events):
     csv_file = "src/siem/data/processed/normalized_events.csv"

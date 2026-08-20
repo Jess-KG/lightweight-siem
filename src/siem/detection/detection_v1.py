@@ -1,4 +1,5 @@
 from datetime import timedelta, datetime
+
 def detect_alerts(events):
     alerts = []
     for event in events:
