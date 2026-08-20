@@ -2,51 +2,43 @@ import Evtx.Evtx as evtx
 import xml.etree.ElementTree as ET
 from ..models.event import Event
 
+# src/siem/collector/collector.py
 def open_evtx(input_file):
-
     with evtx.Evtx(input_file) as log:
-
         for record in log.records():
-            event = Event(event_id=None, timestamp=None, computer=None, event_data=None)
-            root = ET.fromstring(record.xml())
+            try:
+                root = ET.fromstring(record.xml())
+            except ET.ParseError:
+                continue
 
+            event = Event(event_id=None, timestamp=None, computer=None, event_data=None, provider=None)
             system = None
             event_data = None
 
-            # Get the two main children of Event
             for child in root:
-                tag = child.tag.rsplit("}", 1)[-1] 
+                tag = child.tag.rsplit("}", 1)[-1]
                 if tag == "System":
                     system = child
-                elif tag in ("EventData", "UserData"):  # see point 4
+                elif tag in ("EventData", "UserData"):
                     event_data = child
 
-            # -------------------------
-            # System information
-            # -------------------------
-
             for child in system:
-
-                if "EventID" in child.tag:
+                tag = child.tag.rsplit("}", 1)[-1]
+                if tag == "Provider":
+                    event.provider = child.attrib.get("Name")
+                elif tag == "EventID":
                     event.event_id = child.text
-
-                elif "TimeCreated" in child.tag:
-                    event.timestamp = child.attrib["SystemTime"]
-
-                elif "Computer" in child.tag:
+                elif tag == "TimeCreated":
+                    event.timestamp = child.attrib.get("SystemTime")
+                elif tag == "Computer":
                     event.computer = child.text
-
-            # -------------------------
-            # Event-specific information
-            # -------------------------
 
             if event_data is not None:
                 event.event_data = {}
                 for child in event_data:
-                    if "Data" in child.tag:
-                        name = child.attrib.get("Name")
-                        value = child.text
-                        event.event_data[name] = value
+                    tag = child.tag.rsplit("}", 1)[-1]
+                    if tag == "Data":
+                        name = child.attrib.get("Name", "Value")
+                        event.event_data[name] = child.text
+
             yield event
-
-

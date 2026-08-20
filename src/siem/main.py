@@ -1,12 +1,13 @@
 from .collector.collector import open_evtx
 from .normalizer.normalizer import normalize
+from .detection.detection_v1 import detect_alerts
 import csv
 import json
 import os
 
 def main():
     print("Starting SIEM Collector...")
-    input_file = "src/siem/data/raw_logs/security.evtx"
+    input_file = "src/siem/data/raw_logs/sysmon_uacbypass_CDSSync_schtask_hijack_byeintegrity5.evtx"
 
     print(f"Opening EVTX file: {input_file}")
     events = open_evtx(input_file)
@@ -36,28 +37,40 @@ def main():
     print("Storing normalized events in CSV...")
     store_in_csv(normalized_events)
 
+    #fetching alerts
+    print("Detecting alerts...")
+    alerts = detect_alerts(normalized_events)
+    if alerts is not None:
+        for alert in alerts:
+            print(f"[{alert['severity'].upper()}] {alert['rule']}")
+            print(f"  Time:     {alert['timestamp']}")
+            print(f"  Computer: {alert['computer']}")
+            print(f"  Message:  {alert['message']}")
+            print()
+
+
 def store_in_csv(events):
     csv_file = "src/siem/data/processed/normalized_events.csv"
-    #getting all possible columns
-    common_field_names = ["event_id", "timestamp", "computer", "type"]
-    for event in events:
+
+    csv_ready_events = [
+        {k: v for k, v in event.items() if k != "data"}
+        for event in events
+    ]
+
+    common_field_names = ["event_id", "timestamp", "computer", "type", "provider"]
+    for event in csv_ready_events:
         for key in event.keys():
             if key not in common_field_names:
                 common_field_names.append(key)
-    
-    #writing header only if it doesn't exist
-    write_header = False
-    if not os.path.exists(csv_file) or os.path.getsize(csv_file) == 0:
-        write_header = True
+
+    write_header = not os.path.exists(csv_file) or os.path.getsize(csv_file) == 0
 
     with open(csv_file, mode='a', newline='') as file:
-        writer = csv.DictWriter(file, fieldnames=common_field_names)
+        writer = csv.DictWriter(file, fieldnames=common_field_names, extrasaction='ignore')
         if write_header:
             writer.writeheader()
-        for event in events:
+        for event in csv_ready_events:
             writer.writerow(event)
-
-    
 
 if __name__ == "__main__":
     main()

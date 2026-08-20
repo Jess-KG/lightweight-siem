@@ -1,86 +1,178 @@
+EVENT_TYPES = {
+    # Windows Security
+    ("Microsoft-Windows-Security-Auditing", "4720"): "account_created",
+    ("Microsoft-Windows-Security-Auditing", "4732"): "group_membership_added",
+    ("Microsoft-Windows-Security-Auditing", "4648"): "explicit_credential_logon",
+    ("Microsoft-Windows-Security-Auditing", "4672"): "special_privileges_assigned",
+    ("Microsoft-Windows-Security-Auditing", "1100"): "event_log_service_shutdown",
+    ("Microsoft-Windows-Security-Auditing", "1101"): "event_log_cleared",
+
+    # Sysmon
+    ("Microsoft-Windows-Sysmon", "1"): "process_created",
+    ("Microsoft-Windows-Sysmon", "3"): "network_connection",
+    ("Microsoft-Windows-Sysmon", "6"): "driver_loaded",
+    ("Microsoft-Windows-Sysmon", "7"): "image_loaded",
+    ("Microsoft-Windows-Sysmon", "8"): "remote_thread_created",
+    ("Microsoft-Windows-Sysmon", "10"): "process_access",
+    ("Microsoft-Windows-Sysmon", "11"): "file_created",
+    ("Microsoft-Windows-Sysmon", "12"): "registry_object_created",
+    ("Microsoft-Windows-Sysmon", "13"): "registry_value_set",
+    ("Microsoft-Windows-Sysmon", "14"): "registry_object_renamed",
+    ("Microsoft-Windows-Sysmon", "22"): "dns_query",
+}
+
 def normalize(event):
-    #we are goin go normalize only some events as the current dataset is incomplete
-    #4720 --> User Account Created
-    #4732 --> User Account Enabled / added to a group
-    #4648 --> explicit credential logon
-    #4672 --> administrative privilege assigned to a user
-    #1100/1101 --> log cleared
-
-    handlers = {
-        "4720": handle_user_account_created,
-        "4732": handle_group_membership_change,
-        "4648": handle_explicit_credential_logon,
-        "4672": handle_administrative_privilege_assigned,
-        "1100": handle_log_cleared,
-        "1101": handle_log_cleared
-    }
-    handler = handlers[event.event_id] if event.event_id in handlers else None
-    if handler is None:
-        return None
-    
-    return handler(event)
-
-
-def handle_user_account_created(event):
     data = event.event_data or {}
-    return {
-        "event_id": event.event_id,
+    provider = event.provider or "Microsoft-Windows-Security-Auditing"
+    event_id = str(event.event_id)
+    event_type = EVENT_TYPES.get((provider, event_id), "unknown")
+
+    normalized = {
+        "event_id": event_id,
         "timestamp": event.timestamp,
         "computer": event.computer,
-        "type": "account_created",
-        "actor": data.get("SubjectUserName"),
-        "target_account": data.get("TargetUserName"),
-        "target_sid": data.get("TargetSid"),
+        "provider": provider,
+        "type": event_type,
+        "data": data,
     }
 
+    if event_type == "account_created":
+        normalized.update({
+            "actor": data.get("SubjectUserName"),
+            "target_account": data.get("TargetUserName"),
+            "target_sid": data.get("TargetSid"),
+        })
 
-def handle_group_membership_change(event):
+    elif event_type == "group_membership_added":
+        normalized.update({
+            "actor": data.get("SubjectUserName"),
+            "member_added": data.get("MemberName"),
+            "group": data.get("TargetUserName"),
+        })
+
+    elif event_type == "explicit_credential_logon":
+        normalized.update({
+            "actor": data.get("SubjectUserName"),
+            "target_account": data.get("TargetUserName"),
+            "target_server": data.get("TargetServerName"),
+            "source_ip": data.get("IpAddress"),
+            "process": data.get("ProcessName"),
+        })
+
+    elif event_type == "special_privileges_assigned":
+        normalized.update({
+            "actor": data.get("SubjectUserName"),
+            "privileges": data.get("PrivilegeList"),
+        })
+
+    elif event_type == "process_access":
+        # Confirmed from real data: uses SourceImage/TargetImage, NOT Image/ParentImage
+        normalized.update({
+            "source_process": data.get("SourceImage"),
+            "target_process": data.get("TargetImage"),
+            "granted_access": data.get("GrantedAccess"),
+            "call_trace": data.get("CallTrace"),
+        })
+
+    elif event_type in {
+        "process_created",
+        "network_connection",
+        "file_created",
+        "dns_query",
+        "remote_thread_created",
+        "image_loaded",
+    }:
+        normalized.update({
+            "user": data.get("User"),
+            "process": data.get("Image"),
+            "parent_process": data.get("ParentImage"),
+            "command_line": data.get("CommandLine"),
+            "source_ip": data.get("SourceIp"),
+            "source_port": data.get("SourcePort"),
+            "destination_ip": data.get("DestinationIp"),
+            "destination_port": data.get("DestinationPort"),
+            "destination_hostname": data.get("DestinationHostname"),
+        })
+
+    return normalized
+
     data = event.event_data or {}
-    return {
-        "event_id": event.event_id,
+
+    provider = getattr(event, "provider", None)
+
+    # Some event models may not currently expose provider.
+    # Fall back to a sensible default for existing Security events.
+    if not provider:
+        provider = "Microsoft-Windows-Security-Auditing"
+
+    event_id = str(event.event_id)
+
+    event_type = EVENT_TYPES.get(
+        (provider, event_id),
+        "unknown"
+    )
+
+    normalized = {
+        "event_id": event_id,
         "timestamp": event.timestamp,
         "computer": event.computer,
-        "type": "group_membership_added",
-        "actor": data.get("SubjectUserName"),
-        "member_added": data.get("MemberName"),
-        "group": data.get("TargetUserName"),
+        "provider": provider,
+        "type": event_type,
+        "data": data,
     }
 
+    # Add useful semantic fields for the events where
+    # they make detection/correlation easier.
+    if event_type == "account_created":
+        normalized.update({
+            "actor": data.get("SubjectUserName"),
+            "target_account": data.get("TargetUserName"),
+            "target_sid": data.get("TargetSid"),
+        })
 
-def handle_explicit_credential_logon(event):
-    data = event.event_data or {}
-    return {
-        "event_id": event.event_id,
-        "timestamp": event.timestamp,
-        "computer": event.computer,
-        "type": "explicit_credential_logon",
-        "actor": data.get("SubjectUserName"),
-        "target_account": data.get("TargetUserName"),
-        "target_server": data.get("TargetServerName"),
-        "source_ip": data.get("IpAddress"),
-        "process": data.get("ProcessName"),
-    }
+    elif event_type == "group_membership_added":
+        normalized.update({
+            "actor": data.get("SubjectUserName"),
+            "member_added": data.get("MemberName"),
+            "group": data.get("TargetUserName"),
+        })
 
+    elif event_type == "explicit_credential_logon":
+        normalized.update({
+            "actor": data.get("SubjectUserName"),
+            "target_account": data.get("TargetUserName"),
+            "target_server": data.get("TargetServerName"),
+            "source_ip": data.get("IpAddress"),
+            "process": data.get("ProcessName"),
+        })
 
-def handle_administrative_privilege_assigned(event):
-    data = event.event_data or {}
-    return {
-        "event_id": event.event_id,
-        "timestamp": event.timestamp,
-        "computer": event.computer,
-        "type": "admin_privileges_assigned",
-        "actor": data.get("SubjectUserName"),
-        "privileges": data.get("PrivilegeList"),
-    }
+    elif event_type == "special_privileges_assigned":
+        normalized.update({
+            "actor": data.get("SubjectUserName"),
+            "privileges": data.get("PrivilegeList"),
+        })
 
+    elif event_type in {
+        "process_created",
+        "network_connection",
+        "file_created",
+        "dns_query",
+        "remote_thread_created",
+        "process_access",
+        "image_loaded",
+    }:
+        # Common Sysmon fields are kept as convenient top-level fields,
+        # while the complete event remains available in "data".
+        normalized.update({
+            "user": data.get("User"),
+            "process": data.get("Image"),
+            "parent_process": data.get("ParentImage"),
+            "command_line": data.get("CommandLine"),
+            "source_ip": data.get("SourceIp"),
+            "source_port": data.get("SourcePort"),
+            "destination_ip": data.get("DestinationIp"),
+            "destination_port": data.get("DestinationPort"),
+            "destination_hostname": data.get("DestinationHostname"),
+        })
 
-def handle_log_cleared(event):
-    # 1100/1101 typically have no EventData — just System block info
-    return {
-        "event_id": event.event_id,
-        "timestamp": event.timestamp,
-        "computer": event.computer,
-        "type": "log_service_change",
-        "note": "Event logging service shutdown/change — possible log tampering",
-    }
-    
+    return normalized
