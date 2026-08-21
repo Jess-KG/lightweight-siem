@@ -51,7 +51,7 @@ def detect_success_after_failures(events, threshold = 3, window_minutes = 10):
     success = []
     alerts = []
     for e in events:
-        if e.get("actor") is not none:
+        if e.get("actor") is not None:
             if e.get("type") == "successful_logon":
                 success.append(e)
             elif e.get("type") == "failed_logon":
@@ -59,15 +59,15 @@ def detect_success_after_failures(events, threshold = 3, window_minutes = 10):
     
     for s in success:
         actor = s.get("actor")
-        s_time = _parse_ts(s.get("timestamp")).total_seconds()
-        if actor is None or window_time is None:
+        s_time = _parse_ts(s.get("timestamp"))
+        if actor is None or s_time is None:
             continue
         
         recent_fails = []
         for f in failed:
             if f.get("actor") == actor:
-                f_time = _parse_ts(s.get("timestamp")).total_seconds()
-                if s_time - f_time <= window_minutes * 60:
+                f_time = _parse_ts(s.get("timestamp"))
+                if (s_time - f_time).total_seconds() <= window_minutes * 60:
                     recent_fails.append(f)
 
         if len(recent_fails) > threshold:
@@ -162,6 +162,7 @@ def detect_locked_account_activity(events):
             "timestamp": e.get("timestamp"), "computer": e.get("computer"),
             "message": f"Account '{e.get('actor')}' was locked out",
         })
+    return alerts
 
 def run_detections(events):
     rule_functions = [
@@ -194,5 +195,6 @@ def run_detections(events):
 
     all_alerts = []
     for fn in rule_functions:
-        all_alerts.extend(fn(events))
+        result = fn(events)
+        all_alerts.extend(result)
     return all_alerts

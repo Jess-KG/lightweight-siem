@@ -1,0 +1,2224 @@
+<Events>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:00:20.0000000Z" />
+    <EventRecordID>1</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:00:40.0000000Z" />
+    <EventRecordID>2</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:01:00.0000000Z" />
+    <EventRecordID>3</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:01:20.0000000Z" />
+    <EventRecordID>4</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:01:40.0000000Z" />
+    <EventRecordID>5</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:02:00.0000000Z" />
+    <EventRecordID>6</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:02:20.0000000Z" />
+    <EventRecordID>7</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:02:40.0000000Z" />
+    <EventRecordID>8</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:03:00.0000000Z" />
+    <EventRecordID>9</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:03:20.0000000Z" />
+    <EventRecordID>10</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:03:40.0000000Z" />
+    <EventRecordID>11</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:04:00.0000000Z" />
+    <EventRecordID>12</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:04:30.0000000Z" />
+    <EventRecordID>13</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">203.0.113.50</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:06:30.0000000Z" />
+    <EventRecordID>14</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">alice</Data>
+    <Data Name="IpAddress">198.51.100.77</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:07:30.0000000Z" />
+    <EventRecordID>15</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">bob</Data>
+    <Data Name="IpAddress">198.51.100.77</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:08:30.0000000Z" />
+    <EventRecordID>16</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">carol</Data>
+    <Data Name="IpAddress">198.51.100.77</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:09:30.0000000Z" />
+    <EventRecordID>17</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">dave</Data>
+    <Data Name="IpAddress">198.51.100.77</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:10:30.0000000Z" />
+    <EventRecordID>18</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">erin</Data>
+    <Data Name="IpAddress">198.51.100.77</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:11:30.0000000Z" />
+    <EventRecordID>19</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">frank</Data>
+    <Data Name="IpAddress">198.51.100.77</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:12:30.0000000Z" />
+    <EventRecordID>20</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">grace</Data>
+    <Data Name="IpAddress">198.51.100.77</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:13:30.0000000Z" />
+    <EventRecordID>21</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">heidi</Data>
+    <Data Name="IpAddress">198.51.100.77</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:15:45.0000000Z" />
+    <EventRecordID>22</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mwilson</Data>
+    <Data Name="IpAddress">45.33.22.11</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:16:00.0000000Z" />
+    <EventRecordID>23</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mwilson</Data>
+    <Data Name="IpAddress">45.33.22.12</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:16:15.0000000Z" />
+    <EventRecordID>24</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mwilson</Data>
+    <Data Name="IpAddress">45.33.22.13</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:16:30.0000000Z" />
+    <EventRecordID>25</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mwilson</Data>
+    <Data Name="IpAddress">45.33.22.14</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:16:45.0000000Z" />
+    <EventRecordID>26</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mwilson</Data>
+    <Data Name="IpAddress">45.33.22.15</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:19:45.0000000Z" />
+    <EventRecordID>27</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV02</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">tadmin</Data>
+    <Data Name="IpAddress">192.168.1.44</Data>
+    <Data Name="LogonType">10</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:20:45.0000000Z" />
+    <EventRecordID>28</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">svc_backup</Data>
+    <Data Name="IpAddress">192.168.1.10</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:21:45.0000000Z" />
+    <EventRecordID>29</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV02</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">temp_contractor</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4648</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:22:45.0000000Z" />
+    <EventRecordID>30</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV02</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">jdoe</Data>
+    <Data Name="TargetUserName">administrator</Data>
+    <Data Name="TargetServerName">WIN-DC01</Data>
+    <Data Name="IpAddress">192.168.1.55</Data>
+    <Data Name="ProcessName">C:\Windows\System32\runas.exe</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4672</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:23:45.0000000Z" />
+    <EventRecordID>31</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">jdoe</Data>
+    <Data Name="PrivilegeList">SeDebugPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4672</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:23:55.0000000Z" />
+    <EventRecordID>32</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeAuditPrivilege</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4672</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:24:05.0000000Z" />
+    <EventRecordID>33</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">LOCAL SERVICE</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeAuditPrivilege</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4672</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:24:15.0000000Z" />
+    <EventRecordID>34</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">NETWORK SERVICE</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeAuditPrivilege</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:26:15.0000000Z" />
+    <EventRecordID>35</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">old_employee</Data>
+    <Data Name="IpAddress">192.168.1.99</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Account currently disabled.</Data>
+    <Data Name="Status">0xC0000072</Data>
+    <Data Name="SubStatus">0xC0000072</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4740</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:27:15.0000000Z" />
+    <EventRecordID>36</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">rjohnson</Data>
+    <Data Name="TargetDomainName">CORP</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4720</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:29:15.0000000Z" />
+    <EventRecordID>37</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">admin_svc</Data>
+    <Data Name="TargetUserName">backdoor_acct</Data>
+    <Data Name="TargetSid">S-1-5-21-1111111111-2222222222-3333333333-1105</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4722</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:30:15.0000000Z" />
+    <EventRecordID>38</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">admin_svc</Data>
+    <Data Name="TargetUserName">backdoor_acct</Data>
+    <Data Name="TargetSid">S-1-5-21-1111111111-2222222222-3333333333-1105</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4732</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T08:31:15.0000000Z" />
+    <EventRecordID>39</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">admin_svc</Data>
+    <Data Name="MemberName">backdoor_acct</Data>
+    <Data Name="TargetUserName">Administrators</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4725</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T09:31:15.0000000Z" />
+    <EventRecordID>40</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">hr_admin</Data>
+    <Data Name="TargetUserName">former_employee</Data>
+    <Data Name="TargetSid">S-1-5-21-1111111111-2222222222-3333333333-1201</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4726</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T09:36:15.0000000Z" />
+    <EventRecordID>41</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">hr_admin</Data>
+    <Data Name="TargetUserName">former_employee</Data>
+    <Data Name="TargetSid">S-1-5-21-1111111111-2222222222-3333333333-1201</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4723</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T09:46:15.0000000Z" />
+    <EventRecordID>42</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">ksmith</Data>
+    <Data Name="TargetUserName">ksmith</Data>
+    <Data Name="TargetSid">S-1-5-21-1111111111-2222222222-3333333333-1301</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4724</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T09:47:15.0000000Z" />
+    <EventRecordID>43</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">helpdesk1</Data>
+    <Data Name="TargetUserName">ksmith</Data>
+    <Data Name="TargetSid">S-1-5-21-1111111111-2222222222-3333333333-1301</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4733</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T09:52:15.0000000Z" />
+    <EventRecordID>44</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">admin_svc</Data>
+    <Data Name="MemberName">jdoe</Data>
+    <Data Name="TargetUserName">Administrators</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4722</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T09:55:15.0000000Z" />
+    <EventRecordID>45</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">misconfigured_admin</Data>
+    <Data Name="TargetUserName">Guest</Data>
+    <Data Name="TargetSid">S-1-5-21-1111111111-2222222222-3333333333-501</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T09:57:15.0000000Z" />
+    <EventRecordID>46</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">Administrator</Data>
+    <Data Name="IpAddress">192.168.1.5</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:00:15.0000000Z" />
+    <EventRecordID>47</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">svc_deploy</Data>
+    <Data Name="IpAddress">192.168.1.20</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:02:15.0000000Z" />
+    <EventRecordID>48</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV02</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">svc_deploy</Data>
+    <Data Name="IpAddress">192.168.1.20</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:04:15.0000000Z" />
+    <EventRecordID>49</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV03</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">svc_deploy</Data>
+    <Data Name="IpAddress">192.168.1.20</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:06:15.0000000Z" />
+    <EventRecordID>50</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV04</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">svc_deploy</Data>
+    <Data Name="IpAddress">192.168.1.20</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1100</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:11:15.0000000Z" />
+    <EventRecordID>51</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1101</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:11:45.0000000Z" />
+    <EventRecordID>52</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:19:45.0000000Z" />
+    <EventRecordID>53</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">nreed</Data>
+    <Data Name="IpAddress">192.168.1.74</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:26:45.0000000Z" />
+    <EventRecordID>54</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">pgomez</Data>
+    <Data Name="IpAddress">192.168.1.70</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:32:45.0000000Z" />
+    <EventRecordID>55</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">swhite</Data>
+    <Data Name="IpAddress">192.168.1.62</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:35:45.0000000Z" />
+    <EventRecordID>56</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">tlee</Data>
+    <Data Name="IpAddress">192.168.1.79</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:42:45.0000000Z" />
+    <EventRecordID>57</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">vpatel</Data>
+    <Data Name="IpAddress">192.168.1.84</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:46:45.0000000Z" />
+    <EventRecordID>58</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-WKS11</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">bwong</Data>
+    <Data Name="IpAddress">192.168.1.25</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:50:45.0000000Z" />
+    <EventRecordID>59</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">cchen</Data>
+    <Data Name="IpAddress">192.168.1.50</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:52:45.0000000Z" />
+    <EventRecordID>60</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">dking</Data>
+    <Data Name="IpAddress">192.168.1.55</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T10:58:45.0000000Z" />
+    <EventRecordID>61</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-WKS11</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">emartin</Data>
+    <Data Name="IpAddress">192.168.1.31</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T11:01:45.0000000Z" />
+    <EventRecordID>62</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">fowen</Data>
+    <Data Name="IpAddress">192.168.1.22</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T11:04:45.0000000Z" />
+    <EventRecordID>63</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">gtan</Data>
+    <Data Name="IpAddress">192.168.1.31</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T11:07:45.0000000Z" />
+    <EventRecordID>64</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-WKS11</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">hross</Data>
+    <Data Name="IpAddress">192.168.1.41</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T11:13:45.0000000Z" />
+    <EventRecordID>65</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">isingh</Data>
+    <Data Name="IpAddress">192.168.1.44</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T11:43:45.0000000Z" />
+    <EventRecordID>66</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">nreed</Data>
+    <Data Name="IpAddress">192.168.1.77</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T11:55:45.0000000Z" />
+    <EventRecordID>67</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">pgomez</Data>
+    <Data Name="IpAddress">192.168.1.72</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T12:19:45.0000000Z" />
+    <EventRecordID>68</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">swhite</Data>
+    <Data Name="IpAddress">192.168.1.77</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4648</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T12:23:45.0000000Z" />
+    <EventRecordID>69</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">jdoe</Data>
+    <Data Name="TargetUserName">administrator</Data>
+    <Data Name="TargetServerName">WIN-SRV01</Data>
+    <Data Name="IpAddress">192.168.1.55</Data>
+    <Data Name="ProcessName">C:\Windows\System32\runas.exe</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4648</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T12:33:45.0000000Z" />
+    <EventRecordID>70</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV02</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">jdoe</Data>
+    <Data Name="TargetUserName">administrator</Data>
+    <Data Name="TargetServerName">WIN-SRV02</Data>
+    <Data Name="IpAddress">192.168.1.55</Data>
+    <Data Name="ProcessName">C:\Windows\System32\runas.exe</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4648</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T12:38:45.0000000Z" />
+    <EventRecordID>71</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV03</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">jdoe</Data>
+    <Data Name="TargetUserName">administrator</Data>
+    <Data Name="TargetServerName">WIN-SRV03</Data>
+    <Data Name="IpAddress">192.168.1.55</Data>
+    <Data Name="ProcessName">C:\Windows\System32\runas.exe</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4720</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T12:53:45.0000000Z" />
+    <EventRecordID>72</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">hr_admin</Data>
+    <Data Name="TargetUserName">new_hire_01</Data>
+    <Data Name="TargetSid">S-1-5-21-1111111111-2222222222-3333333333-1401</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4722</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T12:55:45.0000000Z" />
+    <EventRecordID>73</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserName">hr_admin</Data>
+    <Data Name="TargetUserName">new_hire_01</Data>
+    <Data Name="TargetSid">S-1-5-21-1111111111-2222222222-3333333333-1401</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T12:59:45.0000000Z" />
+    <EventRecordID>74</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">nreed</Data>
+    <Data Name="IpAddress">192.168.1.25</Data>
+    <Data Name="LogonType">10</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:00:45.0000000Z" />
+    <EventRecordID>75</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV02</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">swhite</Data>
+    <Data Name="IpAddress">192.168.1.70</Data>
+    <Data Name="LogonType">10</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:02:45.0000000Z" />
+    <EventRecordID>76</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">cchen</Data>
+    <Data Name="IpAddress">192.168.1.25</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:06:45.0000000Z" />
+    <EventRecordID>77</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">tlee</Data>
+    <Data Name="IpAddress">192.168.1.86</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:10:45.0000000Z" />
+    <EventRecordID>78</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">pgomez</Data>
+    <Data Name="IpAddress">192.168.1.53</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:13:45.0000000Z" />
+    <EventRecordID>79</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">tlee</Data>
+    <Data Name="IpAddress">192.168.1.85</Data>
+    <Data Name="LogonType">10</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:17:45.0000000Z" />
+    <EventRecordID>80</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">tlee</Data>
+    <Data Name="IpAddress">192.168.1.73</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:21:45.0000000Z" />
+    <EventRecordID>81</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">bwong</Data>
+    <Data Name="IpAddress">192.168.1.88</Data>
+    <Data Name="LogonType">10</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:23:45.0000000Z" />
+    <EventRecordID>82</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">pgomez</Data>
+    <Data Name="IpAddress">192.168.1.66</Data>
+    <Data Name="LogonType">10</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:27:45.0000000Z" />
+    <EventRecordID>83</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">pgomez</Data>
+    <Data Name="IpAddress">192.168.1.43</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:29:45.0000000Z" />
+    <EventRecordID>84</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">tlee</Data>
+    <Data Name="IpAddress">192.168.1.81</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:31:45.0000000Z" />
+    <EventRecordID>85</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">nreed</Data>
+    <Data Name="IpAddress">192.168.1.66</Data>
+    <Data Name="LogonType">10</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:36:45.0000000Z" />
+    <EventRecordID>86</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">pgomez</Data>
+    <Data Name="IpAddress">192.168.1.86</Data>
+    <Data Name="LogonType">10</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:38:45.0000000Z" />
+    <EventRecordID>87</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">tlee</Data>
+    <Data Name="IpAddress">192.168.1.75</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:43:45.0000000Z" />
+    <EventRecordID>88</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">vpatel</Data>
+    <Data Name="IpAddress">192.168.1.36</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:44:45.0000000Z" />
+    <EventRecordID>89</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">vpatel</Data>
+    <Data Name="IpAddress">192.168.1.89</Data>
+    <Data Name="LogonType">10</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:45:45.0000000Z" />
+    <EventRecordID>90</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">cchen</Data>
+    <Data Name="IpAddress">192.168.1.33</Data>
+    <Data Name="LogonType">10</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>0</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2026-01-15T13:48:45.0000000Z" />
+    <EventRecordID>91</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-SRV02</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">vpatel</Data>
+    <Data Name="IpAddress">192.168.1.20</Data>
+    <Data Name="LogonType">10</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+</Events>
