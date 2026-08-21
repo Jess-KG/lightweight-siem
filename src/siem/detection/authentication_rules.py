@@ -21,7 +21,10 @@ FAILED LOGON PATTERNS
 from datetime import timedelta
 from .generic_rules import detect_count_threshold_breach, detect_distinct_count_threshold_breach, _parse_ts
 
-
+PRIVILEGED_GROUPS = ["Administrators", "Domain Admins", "Enterprise Admins", "Schema Admins"]
+DEFAULT_ACCOUNTS = ["Guest", "Administrator", "DefaultAccount"]
+EXPECTED_INTERACTIVE_ACCOUNTS = ["user1", "user2"]
+NOISE_ACCOUNTS = ["SYSTEM", "LOCAL SERVICE", "NETWORK SERVICE"]
 # ---- Group 1: failed logon volume patterns ----
 
 def detect_failed_logons_same_source(events):
@@ -43,7 +46,122 @@ def detect_password_spraying(events):
                                             threshold=5, window_minutes=15,
                                             rule_name="password_spraying", severity="critical")
 
+def detect_success_after_failures(events, threshold = 3, window_minutes = 10):
+    failed = []
+    success = []
+    alerts = []
+    for e in events:
+        if e.get("actor") is not none:
+            if e.get("type") == "successful_logon":
+                success.append(e)
+            elif e.get("type") == "failed_logon":
+                success.append(e)
+    
+    for s in success:
+        actor = s.get("actor")
+        s_time = _parse_ts(s.get("timestamp")).total_seconds()
+        if actor is None or window_time is None:
+            continue
+        
+        recent_fails = []
+        for f in failed:
+            if f.get("actor") == actor:
+                f_time = _parse_ts(s.get("timestamp")).total_seconds()
+                if s_time - f_time <= window_minutes * 60:
+                    recent_fails.append(f)
 
+        if len(recent_fails) > threshold:
+            alerts.append({
+                "rule": "success_after_repeated_failures",
+                "severity": "high",
+                "timestamp": s.get("timestamp"),
+                "computer": s.get("computer"),
+                "message": f"'{actor}' succeeded after {len(recent_fails)} failed attempts within {window_minutes}min",
+            })
+    return alerts
+
+def detect_rdp_logon(events):
+    alerts = []
+    for e in events:
+        if e.get("type") == "successful_logon" and e.get("logon_type") == "10":
+            alerts.append({
+                "rule": "rdp_logon", "severity": "low",
+                "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+                "message": f"RDP logon by '{e.get('actor')}' from {e.get('source_ip')}",
+            })
+
+    return alerts
+
+
+def detect_network_logon(events):
+    alerts = []
+    for e in events:
+        if e.get("type") == "successful_logon" and e.get("logon_type") == "3":
+            alerts.append({
+            "rule": "network_logon", "severity": "low",
+            "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+            "message": f"Network logon by '{e.get('actor')}' from {e.get('source_ip')}",
+        })
+
+    return alerts
+
+def detect_interactive_logon_unexpected_account(events):
+    alerts = []
+    for e in events:
+        if e.get("type") == "successful_logon" and e.get("logon_type") == "2":
+            actor = e.get("actor")
+            if EXPECTED_INTERACTIVE_ACCOUNTS and actor not in EXPECTED_INTERACTIVE_ACCOUNTS:
+                alerts.append({
+                    "rule": "interactive_logon_unexpected_account", "severity": "medium",
+                    "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+                    "message": f"Unexpected interactive logon by '{actor}'",
+                })
+    return alerts
+
+def detect_explicit_credential_usage(events):
+    alerts = []
+    for e in events:
+        if e.get("type") == "explicit_credential_logon":
+            alerts.append( {
+            "rule": "explicit_credential_usage", "severity": "medium",
+            "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+            "message": f"'{e.get('actor')}' used explicit credentials for '{e.get('target_account')}' on {e.get('target_server')}",
+        })
+    return alerts
+
+def detect_privileged_account_login(events):
+    alerts = []
+    for e in events:
+        if e.get("type") == "special_privileges_assigned" and e.get("actor") not in NOISE_ACCOUNTS:
+            alerts.append({
+            "rule": "privileged_account_login", "severity": "medium",
+            "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+            "message": f"Privileged logon: '{e.get('actor')}' assigned special privileges",
+        })
+    return alerts
+
+
+def detect_disabled_account_auth_attempt(events):
+    alerts = []
+    for e in events:
+        if e.get("type") == "failed_logon" and e.get("failure_reason") and "disabled" in str(e.get("failure_reason")).lower():
+            alerts.append({
+            "rule": "disabled_account_auth_attempt", "severity": "high",
+            "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+            "message": f"Auth attempt on disabled account '{e.get('actor')}'",
+        })
+    return alerts
+
+
+def detect_locked_account_activity(events):
+    alerts = []
+    for e in events:
+        if e.get("type") == "account_locked_out":
+            alerts.append({
+            "rule": "locked_account_activity", "severity": "high",
+            "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+            "message": f"Account '{e.get('actor')}' was locked out",
+        })
 
 def run_detections(events):
     rule_functions = [
@@ -51,15 +169,15 @@ def run_detections(events):
         detect_failed_logons_same_account,
         detect_brute_force,
         detect_password_spraying,
-        # detect_success_after_failures,
+        detect_success_after_failures,
         # detect_unusual_logon_type,
-        # detect_rdp_logon,
-        # detect_network_logon,
-        # detect_interactive_logon_unexpected_account,
-        # detect_explicit_credential_usage,
-        # detect_privileged_account_login,
-        # detect_disabled_account_auth_attempt,
-        # detect_locked_account_activity,
+        detect_rdp_logon,
+        detect_network_logon,
+        detect_interactive_logon_unexpected_account,
+        detect_explicit_credential_usage,
+        detect_privileged_account_login,
+        detect_disabled_account_auth_attempt,
+        detect_locked_account_activity,
         # detect_account_created,
         # detect_account_deleted,
         # detect_account_enabled,
