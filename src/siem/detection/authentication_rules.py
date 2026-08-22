@@ -164,6 +164,106 @@ def detect_locked_account_activity(events):
         })
     return alerts
 
+def _lifecycle_alerts(events, event_type, rule_name, severity="low"):
+    alerts = []
+    for e in events:
+        if e.get("type") == event_type:
+            alerts.append({
+            "rule": rule_name, "severity": severity,
+            "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+            "message": f"{rule_name}: actor='{e.get('actor')}' target='{e.get('target_account')}'",
+        })
+    return alerts
+
+def detect_account_created(events):
+    return _lifecycle_alerts(events, "account_created", "account_created")
+
+def detect_account_deleted(events):
+    return _lifecycle_alerts(events, "account_deleted", "account_deleted", severity="medium")
+
+def detect_account_enabled(events):
+    return _lifecycle_alerts(events, "account_enabled", "account_enabled")
+
+def detect_account_disabled(events):
+    return _lifecycle_alerts(events, "account_disabled", "account_disabled")
+
+def detect_password_changed(events):
+    return _lifecycle_alerts(events, "password_changed", "password_changed")
+
+def detect_password_reset(events):
+    return _lifecycle_alerts(events, "password_reset", "password_reset", severity="medium")
+
+
+def detect_privileged_group_change(events):
+    alerts = []
+    for e in events:
+        if e.get("type") not in {"group_membership_added", "group_membership_removed"}:
+            continue
+        if e.get("group") in PRIVILEGED_GROUPS:
+            if e.get("type") == "group_membership_added":
+                action = "added to" 
+            else:
+                action = "removed from"
+
+            alerts.append({
+                "rule": f"privileged_group_{'added' if action.startswith('added') else 'removed'}",
+                "severity": "high",
+                "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+                "message": f"'{e.get('member_changed')}' {action} privileged group '{e.get('group')}'",
+            })
+    return alerts
+
+
+def detect_unexpected_admin_activity(events):
+    alerts = []
+    for e in events:
+        if e.get("type") == "special_privileges_assigned" and e.get("actor") not in NOISE_ACCOUNTS:
+            alerts.append({
+                "rule": "non_standard_admin_logon", "severity": "medium",
+                "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+                "message": f"Admin privileges assigned to non-standard account: {e.get('actor')}",
+            })
+    return alerts
+
+
+def detect_guest_account_enabled(events):
+    alerts = []
+    for e in events:
+        if e.get("type") == "account_enabled" and e.get("target_account") == "Guest":
+            alerts.append({
+                "rule": "non_standard_admin_logon", "severity": "medium",
+                "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+                "message": f"Admin privileges assigned to non-standard account: {e.get('actor')}",
+            })
+    return alerts
+
+def detect_default_account_activity(events):
+    alerts = []
+    for e in events:
+        if (e.get("actor") in DEFAULT_ACCOUNTS or e.get("target_account") in DEFAULT_ACCOUNTS):
+            alerts.append({
+            "rule": "default_account_activity", "severity": "medium",
+            "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+            "message": f"Activity on default account '{e.get('actor') or e.get('target_account')}' ({e.get('type')})",
+        })
+    return alerts
+
+def detect_auth_across_multiple_hosts(events, threshold=3, window_minutes=30):
+    return detect_distinct_count_threshold_breach(events, "successful_logon", "actor", "computer",
+                                            threshold=threshold, window_minutes=window_minutes,
+                                            rule_name="auth_across_multiple_hosts", severity="high")
+
+def detect_log_tampering(events):
+    alerts = []
+    for e in events:
+        if e.get("type") in {"event_log_service_shutdown", "event_log_cleared"}:
+            alerts.append({
+            "rule": "log_tampering", "severity": "high",
+            "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+            "message": f"Event log service changed on {e.get('computer')} — possible anti-forensics",
+        })   
+    return alerts
+
 def run_detections(events):
     rule_functions = [
         detect_failed_logons_same_source,
@@ -179,18 +279,18 @@ def run_detections(events):
         detect_privileged_account_login,
         detect_disabled_account_auth_attempt,
         detect_locked_account_activity,
-        # detect_account_created,
-        # detect_account_deleted,
-        # detect_account_enabled,
-        # detect_account_disabled,
-        # detect_password_changed,
-        # detect_password_reset,
-        # detect_privileged_group_change,
-        # detect_unexpected_admin_activity,
-        # detect_guest_account_enabled,
-        # detect_default_account_activity,
-        # detect_auth_across_multiple_hosts,
-        # detect_log_tampering,
+        detect_account_created,
+        detect_account_deleted,
+        detect_account_enabled,
+        detect_account_disabled,
+        detect_password_changed,
+        detect_password_reset,
+        detect_privileged_group_change,
+        detect_unexpected_admin_activity,
+        detect_guest_account_enabled,
+        detect_default_account_activity,
+        detect_auth_across_multiple_hosts,
+        detect_log_tampering,
     ]
 
     all_alerts = []

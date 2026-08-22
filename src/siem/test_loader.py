@@ -114,6 +114,6 @@ if __name__ == "__main__":
             print(f"  Time:     {alert['timestamp']}")
             print(f"  Computer: {alert['computer']}")
             print(f"  Message:  {alert['message']}")
-            print()
+            print("-----------------------------------------------------------")
     else:
         print("No alerts detected")
