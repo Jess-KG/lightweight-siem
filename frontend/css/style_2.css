@@ -1,0 +1,215 @@
+body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- header ---- */
+
+header {
+  background-color: #242424;
+  padding: 15px 25px;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+header h1 {
+  font-size: 18px;
+  color: #4fc3f7;
+  margin: 0 0 4px 0;
+}
+
+header h2 {
+  font-size: 13px;
+  color: #808080;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+}
+
+nav a {
+  color: #b0b0b0;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 5px 0;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+nav a.active {
+  color: #4fc3f7;
+  border-bottom: 2px solid #4fc3f7;
+}
+
+/* ---- main content ---- */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+main h2 {
+  margin-bottom: 15px;
+}
+
+main h3 {
+  margin: 25px 0 10px 0;
+}
+
+/* ---- search + severity/rule filters ---- */
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#search-box {
+  flex: 1;
+  padding: 8px 10px;
+  background-color: #242424;
+  border: 1px solid #3a3a3a;
+  color: #e0e0e0;
+  border-radius: 4px;
+}
+
+#severity-select,
+#rule-select {
+  padding: 8px 10px;
+  background-color: #242424;
+  border: 1px solid #3a3a3a;
+  color: #e0e0e0;
+  border-radius: 4px;
+}
+
+/* ---- severity text colors (reused on stat cards + alert rows) ---- */
+
+.severity-critical { color: #ff5252; }
+.severity-high { color: #ffab40; }
+.severity-medium { color: #ffd740; }
+.severity-low { color: #4fc3f7; }
+
+/* ---- stat cards ---- */
+
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background-color: #242424;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  border-color: #4fc3f7;
+}
+
+.stat-card-label {
+  font-size: 13px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.stat-card-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* ---- chart panels ----
+   Chart.js with responsive:true + maintainAspectRatio:false resizes the
+   canvas to match its immediate parent (.panel). If .panel has no fixed
+   height, the canvas grows the panel, which grows the canvas again,
+   forever. Fixing .panel to a set height + making the canvas a flex
+   child that fills the remaining space stops that loop. */
+
+.panel-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.panel {
+  background-color: #242424;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  padding: 15px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-title {
+  color: #4fc3f7;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.panel canvas {
+  flex: 1;
+  min-height: 0;   /* required so the flex child can actually shrink instead of forcing panel to grow */
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ---- alert list ---- */
+
+#alert-list {
+  background-color: #242424;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+}
+
+.alert-row {
+  display: grid;
+  grid-template-columns: 24px 80px 200px 1fr 140px 110px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  border-bottom: 1px solid #3a3a3a;
+  font-size: 13px;
+}
+
+.alert-row:last-child {
+  border-bottom: none;
+}
+
+.alert-row:hover {
+  background-color: #2e2e2e;
+}
+
+.alert-rule {
+  color: #e0e0e0;
+}
+
+.alert-message {
+  color: #b0b0b0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.alert-computer,
+.alert-time {
+  color: #808080;
+  font-size: 12px;
+}
+
+#alert-list p {
+  padding: 20px;
+  color: #808080;
+  margin: 0;
+}

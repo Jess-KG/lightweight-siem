@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style_1.css">
+    <title>Event Viewer | SIEM</title>
+</head>
+
+<body>
+    <header>
+        <h1>Lightweight SIEM</h1>
+        <h2>Event Viewer</h2>
+        <nav>
+            <a href="/events" class="active">Events</a>
+            <a href="/alerts">Alerts</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Events</h2>
+        <div class="summary">
+            <p>Total events: <span id="total-count">0</span></p>
+            <p>Showing: <span id="showing-count">0</span></p>
+        </div>
+
+        <div class="search-section">
+            <input type="text" id="search-box" placeholder="Search bye ">
+            <select id="type-select">
+                <option value="">All Types</option>
+            </select>
+        </div>
+
+        <table id="events-table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Type</th>
+                    <th>Actor</th>
+                    <th>Target</th>
+                    <th>Computer</th>
+                    <th>Source IP</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                    <td colspan="6">Loading...</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+<script>
+    let allEvents = []
+
+    async function loadEvents(){
+        let response = await fetch("/api/events");
+        let data = await response.json();
+
+        allEvents = data.events;
+
+        document.getElementById("total-count").innerText = data.total;
+
+        fillTypeDropDown();
+        showEvents(allEvents);
+    }
+
+    function fillTypeDropDown(){
+        let types = [];
+        const type_select = document.getElementById("type-select");
+        
+        for (let i = 0; i < allEvents.length; i++){
+            let t = allEvents[i].type;
+            if (!types.includes(t)){
+                types.push(t);
+            }
+        }
+
+        for (let i = 0; i < types.length; i++){
+            let option = document.createElement("option");
+            option.value = types[i];
+            option.innerText = types[i];
+            type_select.appendChild(option);
+        }
+    }
+
+    //showing all the vents now
+
+    function showEvents(events){
+        const tbody = document.getElementById("table-body");
+        tbody.innerHTML = "";
+
+        document.getElementById("showing-count").innerText = events.length;
+
+        if (events.length == 0){
+            tbody.innerHTML = "<tr><td colspan = '6'>NO DATA FOUND</td></tr>";
+            return;
+        }
+
+        for (let i = 0; i < events.length; i++) {
+        let e = events[i];
+ 
+        let row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${e.timestamp || "-"}</td>
+          <td>${e.type || "-"}</td>
+          <td>${e.actor || "-"}</td>
+          <td>${e.target_account || e.group || "-"}</td>
+          <td>${e.computer || "-"}</td>
+          <td>${e.source_ip || "-"}</td>
+        `;
+        tbody.appendChild(row);
+      }
+    }
+
+    function applyFilters() {
+      const searchText = document.getElementById("search-box").value.toLowerCase();
+      const selectedType = document.getElementById("type-select").value;
+ 
+      let filtered = [];
+ 
+      for (let i = 0; i < allEvents.length; i++) {
+        let e = allEvents[i];
+ 
+        if (selectedType !== "" && e.type !== selectedType) {
+          continue;
+        }
+ 
+        // check the search text against a few fields
+        let combined = (e.actor || "") + " " + (e.computer || "") + " " + (e.source_ip || "") + " " + (e.target_account || "");
+        combined = combined.toLowerCase();
+ 
+        if (searchText !== "" && !combined.includes(searchText)) {
+          continue;
+        }
+ 
+        filtered.push(e);
+      }
+ 
+      showEvents(filtered);
+    }
+    document.getElementById("search-box").addEventListener("input", applyFilters);
+    document.getElementById("type-select").addEventListener("change", applyFilters);
+ 
+    loadEvents();
+</script>
+</body>
+
+</html>

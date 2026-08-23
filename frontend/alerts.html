@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/css/style_2.css">
+    <title>Alerts - SIEM Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <h1>Lightweight SIEM</h1>
+        <h2>Event Viewer</h2>
+        <nav>
+            <a href="/events">Events</a>
+            <a href="/alerts"  class="active">Alerts</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Alert Center</h2>
+        <div class="controls">
+            <input type="text" id="search-box" placeholder="Search alerts...">
+
+            <select id="severity-select">
+                <option value="">All severities</option>
+                <option value="critical">Critical</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+
+            <select id="rule-select">
+                <option value="">All rules</option>
+            </select>
+        </div>
+
+        <div class="stat-cards">
+            <div class="stat-card" id="card-critical" data-severity="critical">
+                <div class="stat-card-label severity-critical">Critical</div>
+                <div class="stat-card-value" id="count-critical">0</div>
+            </div>
+            <div class="stat-card" id="card-high" data-severity="high">
+                <div class="stat-card-label severity-high">High</div>
+                <div class="stat-card-value" id="count-high">0</div>
+            </div>
+            <div class="stat-card" id="card-medium" data-severity="medium">
+                <div class="stat-card-label severity-medium">Medium</div>
+                <div class="stat-card-value" id="count-medium">0</div>
+            </div>
+            <div class="stat-card" id="card-low" data-severity="low">
+                <div class="stat-card-label severity-low">Low</div>
+                <div class="stat-card-value" id="count-low">0</div>
+            </div>
+        </div>
+
+        <div class="panel-row">
+            <div class="panel">
+                <div class="panel-title">Alert Trend (by hour)</div>
+                <canvas id="trend-canvas"></canvas>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title">Alert Distribution</div>
+                <canvas id="distribution-canvas"></canvas>
+            </div>
+        </div>
+        <h3>Alerts</h3>
+
+        <div id="alert-list">
+            <p>Loading...</p>
+        </div>
+    </main>
+
+    <script>
+        let allAlerts = [];
+
+        let trendChart = null;
+        let distributionChart = null;
+
+        let currentSeverity = "";
+        let currentRule = "";
+        let currentSearch = "";
+
+        async function loadAlerts() {
+            const response = await fetch("/api/alerts");
+            const data = await response.json();
+
+            allAlerts = data.alerts;
+
+            fillRuleDropdown();
+            applyFilters();
+        }
+
+        function fillRuleDropdown() {
+            const select = document.getElementById("rule-select");
+
+            let rules = [];
+            for (let i = 0; i < allAlerts.length; i++) {
+                let r = allAlerts[i].rule;
+                if (!rules.includes(r)) {
+                    rules.push(r);
+                }
+            }
+
+            for (let i = 0; i < rules.length; i++) {
+                let option = document.createElement("option");
+                option.value = rules[i];
+                option.innerText = rules[i];
+                select.appendChild(option);
+            }
+        }
+
+        function applyFilters() {
+            let filtered = [];
+            currentSeverity = document.getElementById("severity-select").value.toLowerCase();
+            currentSearch = document.getElementById("search-box").value.toLowerCase();
+            currentRule = document.getElementById("rule-select").value.toLowerCase();
+
+            for (let i = 0; i < allAlerts.length; i++) {
+                let a = allAlerts[i];
+
+                if (currentSeverity !== "" && a.severity !== currentSeverity) {
+                    continue;
+                }
+
+                if (currentRule !== "" && a.rule !== currentRule) {
+                    continue;
+                }
+
+                let combined = (a.rule || "") + " " + (a.message || "") + " " + (a.computer || "");
+                combined = combined.toLowerCase();
+
+                if (currentSearch !== "" && !combined.includes(currentSearch)) {
+                    continue;
+                }
+
+                filtered.push(a);
+            }
+
+            updateStatCards(filtered);
+            drawTrendChart(filtered);
+            drawDistributionChart(filtered)
+            showAlertList(filtered);
+        }
+
+        function updateStatCards(alerts) {
+            let counts = { critical: 0, high: 0, medium: 0, low: 0 };
+
+            for (let i = 0; i < alerts.length; i++) {
+                let sev = alerts[i].severity;
+                if (counts[sev] !== undefined) {
+                    counts[sev]++;
+                }
+            }
+
+            document.getElementById("count-critical").innerText = counts.critical;
+            document.getElementById("count-high").innerText = counts.high;
+            document.getElementById("count-medium").innerText = counts.medium;
+            document.getElementById("count-low").innerText = counts.low;
+        }
+
+        function drawTrendChart(alerts) {
+            let hourlyCounts = {};
+
+            for (let i = 0; i < alerts.length; i++) {
+                let time = new Date(alerts[i].timestamp);
+
+                if (isNaN(time.getTime())) {
+                    continue;
+                }
+
+                let hour = time.getHours().toString().padStart(2, "0") + ":00";
+
+                if (hourlyCounts[hour] === undefined) {
+                    hourlyCounts[hour] = 0;
+                }
+
+                hourlyCounts[hour]++;
+            }
+
+            let labels = Object.keys(hourlyCounts).sort();
+            let values = [];
+
+            for (let i = 0; i < labels.length; i++) {
+                values.push(hourlyCounts[labels[i]]);
+            }
+
+            if (trendChart !== null) {
+                trendChart.destroy();
+            }
+
+            let ctx = document.getElementById("trend-canvas");
+
+            trendChart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: "Alerts",
+                        data: values,
+                        borderWidth: 2,
+                        tension: 0.3,
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    },
+
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        }
+
+
+        function drawDistributionChart(alerts) {
+            let counts = {
+                critical: 0,
+                high: 0,
+                medium: 0,
+                low: 0
+            };
+
+            for (let i = 0; i < alerts.length; i++) {
+                let severity = alerts[i].severity;
+
+                if (counts[severity] !== undefined) {
+                    counts[severity]++;
+                }
+            }
+
+            if (distributionChart !== null) {
+                distributionChart.destroy();
+            }
+
+            let ctx = document.getElementById("distribution-canvas");
+
+            distributionChart = new Chart(ctx, {
+                type: "doughnut",
+
+                data: {
+                    labels: [
+                        "Critical",
+                        "High",
+                        "Medium",
+                        "Low"
+                    ],
+
+                    datasets: [{
+                        data: [
+                            counts.critical,
+                            counts.high,
+                            counts.medium,
+                            counts.low
+                        ],
+
+                        borderWidth: 1
+                    }]
+                },
+
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+
+                    plugins: {
+                        legend: {
+                            position: "right"
+                        }
+                    }
+                }
+            });
+        }
+
+        function showAlertList(alerts) {
+            const wrap = document.getElementById("alert-list");
+            wrap.innerHTML = "";
+
+            if (alerts.length === 0) {
+                wrap.innerHTML = "<p>No alerts found.</p>";
+                return;
+            }
+
+            // dot emoji per severity, just for a quick visual cue
+            let dots = { critical: "🔴", high: "🟠", medium: "🟡", low: "🔵" };
+
+            for (let i = 0; i < alerts.length; i++) {
+                let a = alerts[i];
+                let dot = dots[a.severity] || "⚪";
+
+                let row = document.createElement("div");
+                row.className = "alert-row";
+                row.innerHTML = `
+          <span>${dot}</span>
+          <span class="alert-severity severity-${a.severity}">${a.severity.toUpperCase()}</span>
+          <span class="alert-rule">${a.rule}</span>
+          <span class="alert-message">${a.message}</span>
+          <span class="alert-computer">${a.computer || "-"}</span>
+          <span class="alert-time">${a.timestamp || "-"}</span>
+        `;
+                wrap.appendChild(row);
+            }
+        }
+
+        document.getElementById("search-box").addEventListener("input", applyFilters);
+
+        document.getElementById("severity-select").addEventListener("change", applyFilters);
+
+        document.getElementById("rule-select").addEventListener("change", applyFilters);
+
+        loadAlerts();
+    </script>
+</body>
+
+</html>

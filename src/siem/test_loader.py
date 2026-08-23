@@ -1,24 +1,7 @@
-# test_loader.py
-#
-# Reads test_security_events.xml (synthetic test data — NOT a real binary .evtx)
-# and feeds it through your existing Event model + normalizer + detector,
-# without needing python-evtx / a real binary EVTX file.
-#
-# Usage:
-#   Place this file anywhere in your project (e.g. src/siem/), adjust the
-#   import paths below to match your actual package layout, then run:
-#       python test_loader.py
-#
-# This mimics what open_evtx() gives you (a generator of Event objects) —
-# so everything downstream (normalize, detect) works exactly the same way
-# it would against a real EVTX file.
 
 import xml.etree.ElementTree as ET
 
-# --- adjust these imports to match your project structure ---
-# from src.siem.models.event import Event
-# from src.siem.normalizer.normalizer import normalize
-# from src.siem.detection.detector import run_detections
+
 
 from .normalizer.normalizer import normalize
 from .detection.detection_v2 import detect_alerts
