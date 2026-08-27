@@ -50,3 +50,25 @@ OFFICE_APPS = [
     "powerpnt.exe"
 ]
 
+EXPECTED_POWERSHELL_PARENTS = [
+    "explorer.exe",
+    "cmd.exe",
+    "powershell.exe",
+    "pwsh.exe",
+    "taskeng.exe",
+    "svchost.exe"
+]
+
+SUSPICIOUS_LOGGING_KEYS = [
+    "EnableScriptBlockLogging",
+    "EnableModuleLogging",
+    "EnableTranscripting"
+]
+
+PERSISTENCE_REGISTRY_PATHS = [
+    "\\Run\\",
+    "\\RunOnce\\",
+    "\\Winlogon\\Shell",
+    "\\Winlogon\\Userinit"
+]
+
