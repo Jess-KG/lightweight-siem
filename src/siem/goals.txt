@@ -145,9 +145,6 @@ Detect:
 - PowerShell spawning cmd.exe
 - PowerShell spawning unusual applications
 - Suspicious PowerShell command strings
-- PowerShell executed by Office applications
-- PowerShell executed by unusual parent processes
-- PowerShell executed by unexpected users
 - Suspicious Script Block activity
 - Suspicious PowerShell logging configuration changes
 - PowerShell activity followed by network activity

@@ -1,0 +1,52 @@
+from datetime import timedelta
+
+from .generic_rules import _parse_ts
+
+POWERSHELL_NAMES = [
+    "powershell.exe",
+    "pwsh.exe"
+]
+
+DOWNLOAD_INDICATORS = [
+    "DownloadString",
+    "DownloadFile",
+    "Net.WebClient",
+    "Invoke-WebRequest",
+    "iwr",
+    "curl",
+    "wget"
+]
+
+HIDDEN_FLAGS = [
+    "-WindowStyle Hidden",
+    "-w hidden",
+    "-NoProfile",
+    "-NonInteractive"
+]
+
+ENCODED_FLAGS = [
+    "-EncodedCommand",
+    "-enc",
+    "-e "
+]
+
+BYPASS_FLAGS = [
+    "-ExecutionPolicy Bypass",
+    "-ep bypass"
+]
+
+SUSPICIOUS_STRINGS = [
+    "IEX",
+    "Invoke-Expression",
+    "FromBase64String",
+    "Net.Sockets", #connect to external script and download
+    "Reflection.Assembly" #load code directly into dll or memory, without leavving traces
+]
+
+OFFICE_APPS = [
+    "winword.exe",
+    "excel.exe",
+    "outlook.exe",
+    "powerpnt.exe"
+]
+
