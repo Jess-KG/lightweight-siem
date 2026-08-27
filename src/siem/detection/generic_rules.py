@@ -1,5 +1,15 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from collections import defaultdict
+
+
+def make_alert(rule, severity, event, message):
+    return {
+        "rule": rule,
+        "severity": severity,
+        "timestamp": event.get("timestamp"),
+        "computer": event.get("computer"),
+        "message": message,
+    }
 
 def _parse_ts(ts_str):
     try:
@@ -100,4 +110,30 @@ def detect_distinct_count_threshold_breach(events, event_type, group_by, distinc
                 })
                 break
 
+    return alerts
+
+def join_events_by_process_guid(events_a, events_b, guid_field_a, guid_field_b,
+                                  window_minutes, condition_fn, rule_name, severity, message_fn):
+    alerts = []
+    for a in events_a:
+        guid_a = a.get(guid_field_a)
+        time_a = _parse_ts(a.get("timestamp"))
+        if not guid_a or not time_a:
+            continue
+        guid_a = guid_a.lower()
+
+        for b in events_b:
+            guid_b = b.get(guid_field_b)
+            time_b = _parse_ts(b.get("timestamp"))
+            if not guid_b or not time_b:
+                continue
+            if guid_b.lower() != guid_a:
+                continue
+            if not condition_fn(b):
+                continue
+
+            gap = time_b - time_a
+            if timedelta(0) <= gap <= timedelta(minutes=window_minutes):
+                alerts.append(make_alert(rule_name, severity, b, message_fn(a, b, gap)))
+                break
     return alerts

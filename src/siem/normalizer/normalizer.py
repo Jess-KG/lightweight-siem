@@ -115,13 +115,14 @@ def normalize(event):
         })
 
     elif event_type == "process_access":
-        # Confirmed from real data: uses SourceImage/TargetImage, NOT Image/ParentImage
         normalized.update({
-            "source_process": data.get("SourceImage"),
-            "target_process": data.get("TargetImage"),
-            "granted_access": data.get("GrantedAccess"),
-            "call_trace": data.get("CallTrace"),
-        })
+        "source_process": data.get("SourceImage"),
+        "target_process": data.get("TargetImage"),
+        "granted_access": data.get("GrantedAccess"),
+        "call_trace": data.get("CallTrace"),
+        "source_process_guid": data.get("SourceProcessGUID"),
+        "target_process_guid": data.get("TargetProcessGUID"),
+    })
 
     elif event_type in {
         "process_created",
