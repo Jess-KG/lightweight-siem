@@ -32,7 +32,7 @@ EVENT_TYPES = {
     ("Microsoft-Windows-Sysmon", "1"): "process_created",
     ("Microsoft-Windows-Sysmon", "3"): "network_connection",
     ("Microsoft-Windows-Sysmon", "6"): "driver_loaded",
-    ("Microsoft-Windows-Sysmon", "7"): "image_loaded", #check for signed, unsigned
+    ("Microsoft-Windows-Sysmon", "7"): "image_loaded",
     ("Microsoft-Windows-Sysmon", "8"): "remote_thread_created",
     ("Microsoft-Windows-Sysmon", "10"): "process_access",
     ("Microsoft-Windows-Sysmon", "11"): "file_created",
@@ -40,7 +40,12 @@ EVENT_TYPES = {
     ("Microsoft-Windows-Sysmon", "13"): "registry_value_set",
     ("Microsoft-Windows-Sysmon", "14"): "registry_object_renamed",
     ("Microsoft-Windows-Sysmon", "22"): "dns_query",
+
+    # PowerShell Operational log — separate provider entirely, not Sysmon
+    ("Microsoft-Windows-PowerShell", "4104"): "script_block_logged",
 }
+
+
 def normalize(event):
     data = event.event_data or {}
     provider = event.provider or "Microsoft-Windows-Security-Auditing"
@@ -63,7 +68,7 @@ def normalize(event):
             "source_ip": data.get("IpAddress"),
             "logon_process": data.get("LogonProcessName"),
         })
-    
+
     elif event_type == "failed_logon":
         normalized.update({
             "actor": data.get("TargetUserName"),
@@ -72,7 +77,7 @@ def normalize(event):
             "failure_reason": data.get("FailureReason") or data.get("Status"),
             "sub_status": data.get("SubStatus"),
         })
-    
+
     elif event_type == "account_locked_out":
         normalized.update({
             "actor": data.get("TargetUserName"),
@@ -86,7 +91,6 @@ def normalize(event):
             "target_account": data.get("TargetUserName"),
             "target_sid": data.get("TargetSid"),
         })
-
 
     elif event_type in {"group_membership_added", "group_membership_removed"}:
         normalized.update({
@@ -122,7 +126,6 @@ def normalize(event):
     elif event_type in {
         "process_created",
         "network_connection",
-        "file_created",
         "dns_query",
         "remote_thread_created",
         "image_loaded",
@@ -141,6 +144,35 @@ def normalize(event):
             "destination_ip": data.get("DestinationIp"),
             "destination_port": data.get("DestinationPort"),
             "destination_hostname": data.get("DestinationHostname"),
+            # only populated on image_loaded events — None everywhere else, harmless
+            "signed": data.get("Signed"),
+            "signature_status": data.get("SignatureStatus"),
+        })
+
+    elif event_type == "file_created":
+        # separate branch: file_created doesn't have Image/ParentImage in the
+        # meaningful sense — the file that was created is TargetFilename, and
+        # Image here is the process that DID the creating, not the file itself.
+        normalized.update({
+            "target_filename": data.get("TargetFilename"),
+            "process": data.get("Image"),
+            "process_guid": data.get("ProcessGuid"),
+        })
+
+    elif event_type in {"registry_object_created", "registry_value_set", "registry_object_renamed"}:
+        normalized.update({
+            "process": data.get("Image"),
+            "process_guid": data.get("ProcessGuid"),
+            "target_object": data.get("TargetObject"),
+            "details": data.get("Details"),
+            "event_subtype": data.get("EventType"),
+        })
+
+    elif event_type == "script_block_logged":
+        normalized.update({
+            "script_block_text": data.get("ScriptBlockText"),
+            "script_path": data.get("Path"),
+            "script_block_id": data.get("ScriptBlockId"),
         })
 
     return normalized
