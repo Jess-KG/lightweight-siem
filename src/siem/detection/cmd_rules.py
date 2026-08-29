@@ -25,6 +25,7 @@ def make_alert(rule, severity, event, message):
         "timestamp": event.get("timestamp"),
         "computer": event.get("computer"),
         "message": message,
+        "event" : event
     }
 
 

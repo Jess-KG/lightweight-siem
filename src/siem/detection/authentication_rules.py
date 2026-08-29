@@ -77,6 +77,7 @@ def detect_success_after_failures(events, threshold = 3, window_minutes = 10):
                 "timestamp": s.get("timestamp"),
                 "computer": s.get("computer"),
                 "message": f"'{actor}' succeeded after {len(recent_fails)} failed attempts within {window_minutes}min",
+                "event" : s
             })
     return alerts
 
@@ -88,6 +89,7 @@ def detect_rdp_logon(events):
                 "rule": "rdp_logon", "severity": "low",
                 "timestamp": e.get("timestamp"), "computer": e.get("computer"),
                 "message": f"RDP logon by '{e.get('actor')}' from {e.get('source_ip')}",
+                "event" : e
             })
 
     return alerts
@@ -101,6 +103,7 @@ def detect_network_logon(events):
             "rule": "network_logon", "severity": "low",
             "timestamp": e.get("timestamp"), "computer": e.get("computer"),
             "message": f"Network logon by '{e.get('actor')}' from {e.get('source_ip')}",
+            "event" : e
         })
 
     return alerts
@@ -115,6 +118,7 @@ def detect_interactive_logon_unexpected_account(events):
                     "rule": "interactive_logon_unexpected_account", "severity": "medium",
                     "timestamp": e.get("timestamp"), "computer": e.get("computer"),
                     "message": f"Unexpected interactive logon by '{actor}'",
+                    "event" : e
                 })
     return alerts
 
@@ -126,6 +130,7 @@ def detect_explicit_credential_usage(events):
             "rule": "explicit_credential_usage", "severity": "medium",
             "timestamp": e.get("timestamp"), "computer": e.get("computer"),
             "message": f"'{e.get('actor')}' used explicit credentials for '{e.get('target_account')}' on {e.get('target_server')}",
+            "event" : e
         })
     return alerts
 
@@ -137,6 +142,7 @@ def detect_privileged_account_login(events):
             "rule": "privileged_account_login", "severity": "medium",
             "timestamp": e.get("timestamp"), "computer": e.get("computer"),
             "message": f"Privileged logon: '{e.get('actor')}' assigned special privileges",
+            "event" : e
         })
     return alerts
 
@@ -149,6 +155,7 @@ def detect_disabled_account_auth_attempt(events):
             "rule": "disabled_account_auth_attempt", "severity": "high",
             "timestamp": e.get("timestamp"), "computer": e.get("computer"),
             "message": f"Auth attempt on disabled account '{e.get('actor')}'",
+            "event" : e
         })
     return alerts
 
@@ -161,6 +168,7 @@ def detect_locked_account_activity(events):
             "rule": "locked_account_activity", "severity": "high",
             "timestamp": e.get("timestamp"), "computer": e.get("computer"),
             "message": f"Account '{e.get('actor')}' was locked out",
+            "event" : e
         })
     return alerts
 
@@ -172,6 +180,7 @@ def _lifecycle_alerts(events, event_type, rule_name, severity="low"):
             "rule": rule_name, "severity": severity,
             "timestamp": e.get("timestamp"), "computer": e.get("computer"),
             "message": f"{rule_name}: actor='{e.get('actor')}' target='{e.get('target_account')}'",
+            "event" : e
         })
     return alerts
 
@@ -210,6 +219,7 @@ def detect_privileged_group_change(events):
                 "severity": "high",
                 "timestamp": e.get("timestamp"), "computer": e.get("computer"),
                 "message": f"'{e.get('member_changed')}' {action} privileged group '{e.get('group')}'",
+                "event" : e
             })
     return alerts
 
@@ -222,6 +232,7 @@ def detect_unexpected_admin_activity(events):
                 "rule": "non_standard_admin_logon", "severity": "medium",
                 "timestamp": e.get("timestamp"), "computer": e.get("computer"),
                 "message": f"Admin privileges assigned to non-standard account: {e.get('actor')}",
+                "event" : e
             })
     return alerts
 
@@ -234,6 +245,7 @@ def detect_guest_account_enabled(events):
                 "rule": "non_standard_admin_logon", "severity": "medium",
                 "timestamp": e.get("timestamp"), "computer": e.get("computer"),
                 "message": f"Admin privileges assigned to non-standard account: {e.get('actor')}",
+                "event" : e
             })
     return alerts
 
@@ -245,6 +257,7 @@ def detect_default_account_activity(events):
             "rule": "default_account_activity", "severity": "medium",
             "timestamp": e.get("timestamp"), "computer": e.get("computer"),
             "message": f"Activity on default account '{e.get('actor') or e.get('target_account')}' ({e.get('type')})",
+            "event" : e
         })
     return alerts
 
@@ -261,6 +274,7 @@ def detect_log_tampering(events):
             "rule": "log_tampering", "severity": "high",
             "timestamp": e.get("timestamp"), "computer": e.get("computer"),
             "message": f"Event log service changed on {e.get('computer')} — possible anti-forensics",
+            "event" : e
         })   
     return alerts
 

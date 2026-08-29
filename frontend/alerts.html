@@ -15,7 +15,7 @@
         <h2>Event Viewer</h2>
         <nav>
             <a href="/events">Events</a>
-            <a href="/alerts"  class="active">Alerts</a>
+            <a href="/alerts" class="active">Alerts</a>
         </nav>
     </header>
     <main>
@@ -67,12 +67,38 @@
             </div>
         </div>
         <h3>Alerts</h3>
+        <p class="hint-text">Click any alert to see the full investigation details.</p>
 
         <div id="alert-list">
             <p>Loading...</p>
         </div>
     </main>
 
+    <div id="alert-modal-overlay" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span id="modal-title">Alert Details</span>
+                <button id="modal-close-btn" class="modal-close-btn">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h4>Summary</h4>
+                    <table class="modal-table" id="modal-summary-table"></table>
+                </div>
+
+                <div class="modal-section">
+                    <h4>Normalized Event Fields</h4>
+                    <table class="modal-table" id="modal-normalized-table"></table>
+                </div>
+
+                <div class="modal-section">
+                    <h4>Raw Event Data</h4>
+                    <pre id="modal-raw-data"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         let allAlerts = [];
 
@@ -82,6 +108,7 @@
         let currentSeverity = "";
         let currentRule = "";
         let currentSearch = "";
+        let clickedSeverity = "";
 
         async function loadAlerts() {
             const response = await fetch("/api/alerts");
@@ -121,7 +148,10 @@
             for (let i = 0; i < allAlerts.length; i++) {
                 let a = allAlerts[i];
 
-                if (currentSeverity !== "" && a.severity !== currentSeverity) {
+                if (clickedSeverity != "" && a.severity != clickedSeverity) {
+                    continue;
+                }
+                else if (currentSeverity !== "" && a.severity !== currentSeverity) {
                     continue;
                 }
 
@@ -312,15 +342,101 @@
           <span class="alert-computer">${a.computer || "-"}</span>
           <span class="alert-time">${a.timestamp || "-"}</span>
         `;
+                row.addEventListener("click", function () {
+                    openAlertModal(a);
+                });
                 wrap.appendChild(row);
             }
         }
 
+        function openAlertModal(alert) {
+            document.getElementById("modal-title").innerText = alert.rule;
+
+            // summary table: the top-level alert fields you already see in the list
+            const summaryTable = document.getElementById("modal-summary-table");
+            summaryTable.innerHTML = `
+                <tr><td>Severity</td><td class="severity-${alert.severity}">${alert.severity.toUpperCase()}</td></tr>
+                <tr><td>Rule</td><td>${alert.rule}</td></tr>
+                <tr><td>Message</td><td>${alert.message}</td></tr>
+                <tr><td>Timestamp</td><td>${alert.timestamp || "-"}</td></tr>
+                <tr><td>Computer</td><td>${alert.computer || "-"}</td></tr>
+            `;
+
+            // normalized fields table: everything on the event EXCEPT the raw "data" blob
+            const normalizedTable = document.getElementById("modal-normalized-table");
+            normalizedTable.innerHTML = "";
+
+            const event = alert.event || {};
+            let hasNormalizedFields = false;
+
+            for (let key in event) {
+                if (key === "data") continue;  // raw data gets its own section below
+                if (event[key] === null || event[key] === undefined || event[key] === "") continue;
+
+                hasNormalizedFields = true;
+                let row = document.createElement("tr");
+                row.innerHTML = `<td>${key}</td><td>${event[key]}</td>`;
+                normalizedTable.appendChild(row);
+            }
+
+            if (!hasNormalizedFields) {
+                normalizedTable.innerHTML = "<tr><td colspan='2'>No normalized fields available</td></tr>";
+            }
+
+            // raw data: exactly what came off the wire, pretty-printed
+            const rawDataBox = document.getElementById("modal-raw-data");
+            if (event.data && Object.keys(event.data).length > 0) {
+                rawDataBox.innerText = JSON.stringify(event.data, null, 2);
+            } else {
+                rawDataBox.innerText = "No raw data available for this event.";
+            }
+
+            document.getElementById("alert-modal-overlay").classList.add("modal-visible");
+        }
+
+        function closeAlertModal() {
+            document.getElementById("alert-modal-overlay").classList.remove("modal-visible");
+        }
+
+        document.getElementById("modal-close-btn").addEventListener("click", closeAlertModal);
+
+        // click the dark background outside the box to close it too
+        document.getElementById("alert-modal-overlay").addEventListener("click", function (e) {
+            if (e.target === this) closeAlertModal();
+        });
+
+        // Escape key closes it
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") closeAlertModal();
+        });
         document.getElementById("search-box").addEventListener("input", applyFilters);
 
         document.getElementById("severity-select").addEventListener("change", applyFilters);
 
         document.getElementById("rule-select").addEventListener("change", applyFilters);
+
+        document.querySelectorAll('.stat-card').forEach(card => {
+            card.addEventListener('click', () => {
+
+                if (clickedSeverity === card.dataset.severity) {
+                    clickedSeverity = "";
+                    card.classList.remove("stat-card-active");
+                }
+                else {
+                    clickedSeverity = card.dataset.severity.toLowerCase();
+
+                    // Remove active class from all cards
+                    document.querySelectorAll('.stat-card').forEach(c => {
+                        c.classList.remove("stat-card-active");
+                    });
+
+                    // Add active class to clicked card
+                    card.classList.add("stat-card-active");
+                }
+
+                applyFilters();
+            });
+        });
 
         loadAlerts();
     </script>

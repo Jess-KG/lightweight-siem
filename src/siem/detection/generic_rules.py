@@ -4,11 +4,13 @@ from collections import defaultdict
 
 def make_alert(rule, severity, event, message):
     return {
+
         "rule": rule,
         "severity": severity,
         "timestamp": event.get("timestamp"),
         "computer": event.get("computer"),
         "message": message,
+        "event" : event
     }
 
 def _parse_ts(ts_str):
@@ -57,6 +59,7 @@ def detect_count_threshold_breach(events, event_type, group_by, threshold, windo
                     "message": f"{rule_name}: {len(window_events)} '{event_type}' events for {group_by}='{key}' within {window_minutes}min",
                     "group_key": key,
                     "count": len(window_events),
+                    "event" : window_events[-1][1]
                 })
                 break
 
@@ -107,6 +110,7 @@ def detect_distinct_count_threshold_breach(events, event_type, group_by, distinc
                     "message": f"{rule_name}: {group_by}='{key}' hit {len(distinct_values)} distinct {distinct_field} values within {window_minutes}min",
                     "group_key": key,
                     "count": len(window_events),
+                    "event" : window_events[-1][1]
                 })
                 break
 
