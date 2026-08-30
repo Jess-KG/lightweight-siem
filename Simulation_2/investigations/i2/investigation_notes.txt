@@ -1,0 +1,45 @@
+INVESTIGATION NOTES
+
+Case Reference: CASE-01
+Analyst: Jas
+Date Opened: 8/30/2026 
+
+Scope so far:
+  Accounts involved: jsmith
+  Systems involved: WIN-PC001
+  Time window: 2026-03-09T09:49:09 - 
+
+High-confidence conclusion: jsmith's workstation was compromised via a malicious macro, 
+used to reach admin01's credentials and create a backdoor Domain Admin account.
+TIMELINE
+
+Timestamp           | System      | Account   | Event                              | Notes
+---------------------------------------------------------------------------------------------
+2026-03-09T09:49:09 | WIN-PC001   | jsmith    | 'winword.exe' spawned 'cmd.exe'    | -w hidden -enc paramters used; File named Invoice_March_Statement.docm in Downloads.
+2026-03-09T09:49:28 | WIN-PC001   | jsmith    | powershell_followed_by_network     |TCP Network connection made using powershell -> SOURCE : "tcp","10.20.0.101","Port:49512", DESTINATION : 45.148.10.77:443
+2026-03-09T09:50:33 | WIN-PC001   | jsmith    | execution_of_newly_created_file    |C:\Users\jsmith\AppData\Local\Temp\upd.exe was created and executed within 0:00:40
+2026-03-09T09:50:33 | WIN-PC001   | jsmith    | registry_value_set                 |The file was added to the registry. 'upd.exe' wrote to a persistence-related registry key: 'HKU\S-1-5-21-777-888-999-1201\Software\Microsoft\Windows\CurrentVersion\Run\WinUpdateHelper'
+2026-03-09T10:55:39 | WIN-DC01    | jsmith    | explicit_credential_usage          |'jsmith' used explicit credentials for 'admin01' on WIN-DC01 through process C:\\Windows\\System32\\mstsc.exe 
+2026-03-09T10:57:39 | WIN-DC01    | jsmith    | rdp_logon                          |RDP logon by 'admin01' from 10.20.0.101
+2026-03-09T10:58:39 | admin01     | jsmith    | account_created                    |account_created: actor='admin01' target='svc_update'
+2026-03-09T10:59:39 | admin01     | jsmith    | privileged_group_added             |'svc_update' added to privileged group 'Domain Admins'
+
+
+A word file in jsmith's Downloads folder spawned cmd. cmd.exe started a powershell instance that created a tcp connection with an external ip address.A new file was created 
+which wrote to registry for persistance. And through rdp,
+jsmith accessed admin01's account using explicit crentials. Account svc_update was created by admin01 and added to privileged groups.
+
+
+Open Questions:
+-> What was accessed by svc_update?
+-> How did the file get into jsmith's downloads?
+
+Evidence Supporting Hypothesis:
+1. WINWORD.EXE has no reason to launch command prompt.
+2. Powershell was spawned using -enc and hidden flags.
+3. A file added to registry.
+
+
+Evidence Against / Alternative Explanations:
+1. Could jsmith legitimately need access to admin01 account with IT'S knowledge?
+2. Could SVC_update be a legitimate new service account created around the same time by coincidence.

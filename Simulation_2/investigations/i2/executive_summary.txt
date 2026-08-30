@@ -1,0 +1,31 @@
+EXECUTIVE SUMMARY
+
+Date: 8/30/2026
+Prepared for: Board
+Prepared by: Jas
+
+WHAT HAPPENED
+A phishing email resulted in an employee opening a malicious document, which 
+allowed an unauthorised person to gain access to the organisation's systems. 
+The incident resulted in the theft of sensitive employee information.
+
+WHAT WAS AFFECTED
+PII (Full name, security number and address) of 50 employees from Financial Department.
+
+CURRENT STATUS
+[] Contained
+☑ Under Investigation
+The affected systems and accounts are being secured while the full extent of the incident is investigated.
+
+WHAT WE'RE DOING ABOUT IT
+Securing affected systems and accounts.
+Resetting passwords that may have been compromised.
+Removing unauthorised access.
+Investigating what information was accessed or stolen.
+Reviewing security measures to prevent a similar incident.
+Assessing whether any additional employees or systems were affected.
+
+RISK TO THE ORGANISATION
+The incident presents a critical risk due to the exposure of sensitive 
+employee information and unauthorised access to company systems. 
+The organisation may face privacy, financial, legal, and reputational consequences.

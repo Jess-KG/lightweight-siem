@@ -328,6 +328,19 @@ def suspicious_powershell_logging_change(events):
 
     return alerts
 
+def any_process_creating_persistence(events):
+    alerts = []
+    for e in events:
+        if e.get("type") != "registry_value_set":
+            continue
+        target = e.get("target_object") or ""
+        if any(path.lower() in target.lower() for path in PERSISTENCE_REGISTRY_PATHS):
+            alerts.append(make_alert(
+                "persistence_registry_write", "high", e,
+                f"'{extract_filename(e.get('process'))}' wrote to a persistence-related registry key: '{target}'"
+            ))
+    return alerts
+
 def run_detections_powershell(events):
     rule_functions = [
         powershell_execution,
@@ -342,6 +355,7 @@ def run_detections_powershell(events):
         powershell_and_persistence,
         suspicious_script_block,
         suspicious_powershell_logging_change,
+        any_process_creating_persistence
     ]
 
     all_alerts = []

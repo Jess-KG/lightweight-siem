@@ -169,6 +169,9 @@
                 filtered.push(a);
             }
 
+            filtered.sort(function (a, b) {
+                return new Date(b.timestamp) - new Date(a.timestamp);
+            });
             updateStatCards(filtered);
             drawTrendChart(filtered);
             drawDistributionChart(filtered)

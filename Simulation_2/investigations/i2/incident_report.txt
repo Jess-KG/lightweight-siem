@@ -1,0 +1,57 @@
+INCIDENT REPORT
+
+Incident ID: INCIDENT-001
+Organisation: Southern Cross Financial Services
+Report Date: 8/30/2036
+Analyst: Jasnoor
+Severity: Critical
+Status: Confirmed Incident
+
+1. SUMMARY
+A malicious word file, in John Smith's account, created a tcp connection to an external
+IP Address. A new account was created through the connection and added to privileged groups.
+(made up for the story) A document containing employee details was exfiltrated.
+
+2. TIMELINE OF EVENTS
+Timestamp           | System      | Account   | Event                              | Notes
+---------------------------------------------------------------------------------------------
+2026-03-09T09:49:09 | WIN-PC001   | jsmith    | 'winword.exe' spawned 'cmd.exe'    | -w hidden -enc paramters used; File named Invoice_March_Statement.docm in Downloads.
+2026-03-09T09:49:28 | WIN-PC001   | jsmith    | powershell_followed_by_network     |TCP Network connection made using powershell -> SOURCE : "tcp","10.20.0.101","Port:49512", DESTINATION : 45.148.10.77:443
+2026-03-09T09:50:33 | WIN-PC001   | jsmith    | execution_of_newly_created_file    |C:\Users\jsmith\AppData\Local\Temp\upd.exe was created and executed within 0:00:40
+2026-03-09T09:50:33 | WIN-PC001   | jsmith    | registry_value_set                 |The file was added to the registry. 'upd.exe' wrote to a persistence-related registry key: 'HKU\S-1-5-21-777-888-999-1201\Software\Microsoft\Windows\CurrentVersion\Run\WinUpdateHelper'
+2026-03-09T10:55:39 | WIN-DC01    | jsmith    | explicit_credential_usage          |'jsmith' used explicit credentials for 'admin01' on WIN-DC01 through process C:\\Windows\\System32\\mstsc.exe 
+2026-03-09T10:57:39 | WIN-DC01    | jsmith    | rdp_logon                          |RDP logon by 'admin01' from 10.20.0.101
+2026-03-09T10:58:39 | admin01     | jsmith    | account_created                    |account_created: actor='admin01' target='svc_update'
+2026-03-09T10:59:39 | admin01     | jsmith    | privileged_group_added             |'svc_update' added to privileged group 'Domain Admins'
+(+ exfiltration which is not in the logs but have to make up for the story...)
+
+3. SCOPE
+Accounts affected: jsmith, admin01
+Systems affected: PC001, DC01
+Data potentially affected: Employee names, security numbers and addresses.
+
+4. ROOT CAUSE / ATTACK VECTOR
+John Smith downloaded a malicious word file through a phishing email.
+
+5. MITRE ATT&CK MAPPING
+I.   WINWORD.EXE spawning cmd.exe           T1204.002
+II.  Encoded / hidden powershell window     T1564.003
+III. Powershell -> External connection      T1105
+IV.  Registry Persistance                   T1547.001
+V.   Explicit credential use                T1078.002
+VI.  New account created                    T1136.002       
+
+6. IMPACT ASSESSMENT
+A file containing PII of 50 employees was exfiltrated to an external IP Address.
+This file contained full names, security numbers and addresses of all employees in the finance department.
+
+7. RECOMMENDED CONTAINMENT / REMEDIATION ACTIONS
+Isolate John Smith's computer.
+Disable svc_update.
+Change password of Admin01.
+Change password of John Smith.
+Force logoff any sessions of admin01 and jsmith.
+Review what else svc_update did.
+
+8. DETECTION GAPS IDENTIFIED
+Persistance rule was not detected as an alert and had to be searched in events.

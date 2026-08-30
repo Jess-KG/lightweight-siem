@@ -1,0 +1,27 @@
+ALERT TRIAGE LOG
+
+Date/Time of Review: 8/30/2026 2:20PM
+Analyst: Jas
+Source File: file1.xml
+
+Alert(s) Reviewed:
+  -Severity	MEDIUM
+  -Rule	explicit_credential_usage
+  -Message	'rpatel' used explicit credentials for 'admin01' on WIN-DC01
+  -Timestamp	2026-03-09T09:35:00.0000000Z
+  -Computer	WIN-DC01
+
+Initial Assessment:
+  False Positive
+
+Reasoning:
+The alert was fired because rpatel used explicit credentials for admin01 when connected to WIN-DC01 using RDP.
+The event ID 4648 can be associated with credential misuse or lateral movement. However, in this case, 
+rpatel is an IT Admin. He frequently uses explicit credentials for Admin01.
+Moreover, I have verified the IP address of rpatel, and it is an internal IP Address. 
+The observed activity, therefore, aligns with the expected administrative tasks. No additional 
+indicators of compromise were identified.
+
+Next Action:
+  [ ] Close, no further action
+

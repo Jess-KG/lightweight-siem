@@ -1,0 +1,25 @@
+ALERT TRIAGE LOG
+
+Date/Time of Review: 8/30/2026 2:28PM
+Analyst: Jas
+Source File: file1.xml
+
+Alert(s) Reviewed:
+  -Severity	CRITICAL
+  -Rule	suspicious_parent_child_chain
+  -Message	'winword.exe' spawned 'cmd.exe' — known high-value attack chain
+  -Timestamp	2026-03-09T09:49:09.0000000Z
+  -Computer	WIN-PC001
+
+Initial Assessment:
+  Escalated for further investigation
+
+Reasoning:
+The alert shows WINWORD.EXE launching cmd.exe, which subsequently spawns powershell using -w hidden and -enc parameters.
+The parent document, Invoice_March_Statement.docm, was located in the user jsmith's Downloads directory.
+This process is abnormal for a WINWORD.EXE but is consistent with the execution of malicious macro enabled word files.
+
+
+Next Action:
+  Investigate deeper.
+
