@@ -1,0 +1,2560 @@
+<Events>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:12:00.0000000Z" />
+    <EventRecordID>1</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:14:00.0000000Z" />
+    <EventRecordID>2</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">agarcia</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:17:00.0000000Z" />
+    <EventRecordID>3</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mchen</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:21:00.0000000Z" />
+    <EventRecordID>4</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">rpatel</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:27:00.0000000Z" />
+    <EventRecordID>5</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 08:27:00.000</Data>
+    <Data Name="ProcessGuid">{51139250-a53f-4b16-9c0d-ec6e1bc402a2}</Data>
+    <Data Name="ProcessId">10005</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\jsmith\</Data>
+    <Data Name="User">SCFS\jsmith</Data>
+    <Data Name="ParentProcessGuid">{1691d05c-b752-4b82-b1b3-54c07f789438}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:29:00.0000000Z" />
+    <EventRecordID>6</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 08:29:00.000</Data>
+    <Data Name="ProcessGuid">{dd05aa95-7ad8-403f-b951-baac02f78692}</Data>
+    <Data Name="ProcessId">10006</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{cf9e2f21-ee9c-4398-82f1-e716e4f9e896}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:35:00.0000000Z" />
+    <EventRecordID>7</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 08:35:00.000</Data>
+    <Data Name="ProcessGuid">{7c160cb4-7b5c-45fb-9d28-59c7e2b555a1}</Data>
+    <Data Name="ProcessId">10007</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\agarcia\</Data>
+    <Data Name="User">SCFS\agarcia</Data>
+    <Data Name="ParentProcessGuid">{1e1b3e65-1e09-41dd-8554-a2d3f669aed8}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:40:00.0000000Z" />
+    <EventRecordID>8</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 08:40:00.000</Data>
+    <Data Name="ProcessGuid">{1cab3263-ddb3-44c8-aeb1-4f3e0c398846}</Data>
+    <Data Name="ProcessId">10008</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{d8cf4852-b0d5-4921-a5be-67b8c4bfd20d}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:43:00.0000000Z" />
+    <EventRecordID>9</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 08:43:00.000</Data>
+    <Data Name="ProcessGuid">{1cf7f2d5-34f5-44d2-a778-2dcf184ea56d}</Data>
+    <Data Name="ProcessId">10009</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\agarcia\</Data>
+    <Data Name="User">SCFS\agarcia</Data>
+    <Data Name="ParentProcessGuid">{f48089de-31fc-42d2-8b19-f5a1fe901076}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:46:00.0000000Z" />
+    <EventRecordID>10</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 08:46:00.000</Data>
+    <Data Name="ProcessGuid">{b866efeb-3856-46dd-9799-23b1090d215f}</Data>
+    <Data Name="ProcessId">10010</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{16214727-94d6-4e9f-b11b-12fe5b945990}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:48:00.0000000Z" />
+    <EventRecordID>11</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 08:48:00.000</Data>
+    <Data Name="ProcessGuid">{440f3445-d02d-4535-86a4-c16bd7b6bd89}</Data>
+    <Data Name="ProcessId">10011</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\jsmith\</Data>
+    <Data Name="User">SCFS\jsmith</Data>
+    <Data Name="ParentProcessGuid">{19eb0696-1bfe-4313-89ed-43224781deab}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:54:00.0000000Z" />
+    <EventRecordID>12</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 08:54:00.000</Data>
+    <Data Name="ProcessGuid">{971f1990-3418-4a0e-b4b4-10795e0654a1}</Data>
+    <Data Name="ProcessId">10012</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\jsmith\</Data>
+    <Data Name="User">SCFS\jsmith</Data>
+    <Data Name="ParentProcessGuid">{c0a684f9-102e-4474-b474-ace75d11f239}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T08:56:00.0000000Z" />
+    <EventRecordID>13</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 08:56:00.000</Data>
+    <Data Name="ProcessGuid">{4e9d0105-2666-46e1-8c2e-822636eff6b3}</Data>
+    <Data Name="ProcessId">10013</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\mchen\</Data>
+    <Data Name="User">SCFS\mchen</Data>
+    <Data Name="ParentProcessGuid">{6e9efa4b-77f8-4af2-a701-099c62a422d6}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T09:02:00.0000000Z" />
+    <EventRecordID>14</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 09:02:00.000</Data>
+    <Data Name="ProcessGuid">{efb8cb88-7ed4-4fbe-a2c6-b4f8a4abd73d}</Data>
+    <Data Name="ProcessId">10014</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{ee563953-b591-4c78-8914-a6325529d221}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T09:07:00.0000000Z" />
+    <EventRecordID>15</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 09:07:00.000</Data>
+    <Data Name="ProcessGuid">{e57947b6-79fb-4070-91cf-30898d3bc9b5}</Data>
+    <Data Name="ProcessId">10015</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{7e423340-bae0-45df-acda-3c5f12b1d24d}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T09:13:00.0000000Z" />
+    <EventRecordID>16</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 09:13:00.000</Data>
+    <Data Name="ProcessGuid">{70c71329-52ed-4072-b16c-8670a8998c3f}</Data>
+    <Data Name="ProcessId">10016</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{bda84e72-b799-47ab-abf2-75462c1d53fa}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T09:17:00.0000000Z" />
+    <EventRecordID>17</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 09:17:00.000</Data>
+    <Data Name="ProcessGuid">{ef2f3c70-5e3b-4d3d-896d-849350c74d80}</Data>
+    <Data Name="ProcessId">10017</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\jsmith\</Data>
+    <Data Name="User">SCFS\jsmith</Data>
+    <Data Name="ParentProcessGuid">{8a37a6be-dca1-4e74-8a94-7ba01f5373c3}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T09:20:00.0000000Z" />
+    <EventRecordID>18</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 09:20:00.000</Data>
+    <Data Name="ProcessGuid">{575510df-8939-4aee-b7b3-5aa3dcc94b34}</Data>
+    <Data Name="ProcessId">10018</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{0bf27d46-beac-469e-a314-477649355f0a}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T09:24:00.0000000Z" />
+    <EventRecordID>19</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 09:24:00.000</Data>
+    <Data Name="ProcessGuid">{79b454b2-72c6-4645-965f-f7f9990d7b1f}</Data>
+    <Data Name="ProcessId">10019</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{4b48c17f-1653-40c9-950b-3cf070a9af52}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T09:29:00.0000000Z" />
+    <EventRecordID>20</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-APP01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">10.20.0.1001</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T09:35:00.0000000Z" />
+    <EventRecordID>21</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-APP01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mchen</Data>
+    <Data Name="IpAddress">10.20.0.1003</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T09:41:00.0000000Z" />
+    <EventRecordID>22</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mchen</Data>
+    <Data Name="IpAddress">10.20.0.1003</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T09:47:00.0000000Z" />
+    <EventRecordID>23</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">agarcia</Data>
+    <Data Name="IpAddress">10.20.0.1002</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T09:52:00.0000000Z" />
+    <EventRecordID>24</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">10.20.0.1001</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T09:57:00.0000000Z" />
+    <EventRecordID>25</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">agarcia</Data>
+    <Data Name="IpAddress">10.20.0.1002</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T10:02:00.0000000Z" />
+    <EventRecordID>26</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">10.20.0.1001</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T10:06:00.0000000Z" />
+    <EventRecordID>27</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mchen</Data>
+    <Data Name="IpAddress">10.20.0.1003</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T10:11:00.0000000Z" />
+    <EventRecordID>28</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">10.20.0.1001</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T10:14:00.0000000Z" />
+    <EventRecordID>29</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">rpatel</Data>
+    <Data Name="IpAddress">10.20.0.1004</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:14:25.0000000Z" />
+    <EventRecordID>30</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">admin01</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:14:50.0000000Z" />
+    <EventRecordID>31</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">admin01</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:15:15.0000000Z" />
+    <EventRecordID>32</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">admin01</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:15:40.0000000Z" />
+    <EventRecordID>33</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">admin01</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:16:05.0000000Z" />
+    <EventRecordID>34</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">admin01</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:16:30.0000000Z" />
+    <EventRecordID>35</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">admin01</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:16:55.0000000Z" />
+    <EventRecordID>36</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">admin01</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:17:20.0000000Z" />
+    <EventRecordID>37</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">admin01</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:17:45.0000000Z" />
+    <EventRecordID>38</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">admin01</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:18:10.0000000Z" />
+    <EventRecordID>39</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">admin01</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:18:35.0000000Z" />
+    <EventRecordID>40</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">admin01</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4625</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:20:35.0000000Z" />
+    <EventRecordID>41</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">svc_backup</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="FailureReason">Unknown user name or bad password.</Data>
+    <Data Name="Status">0xC000006D</Data>
+    <Data Name="SubStatus">0xC000006A</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:21:05.0000000Z" />
+    <EventRecordID>42</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">svc_backup</Data>
+    <Data Name="IpAddress">203.0.113.44</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:29:05.0000000Z" />
+    <EventRecordID>43</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 11:29:05.000</Data>
+    <Data Name="ProcessGuid">{c1556a5d-cbcb-4ea6-9778-ba51a6a8960a}</Data>
+    <Data Name="ProcessId">10043</Data>
+    <Data Name="Image">C:\Windows\explorer.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{ae392762-9d7e-4f97-a29a-85feb4883baa}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:32:05.0000000Z" />
+    <EventRecordID>44</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 11:32:05.000</Data>
+    <Data Name="ProcessGuid">{36be11dd-0106-44b0-88dd-28670a18ae89}</Data>
+    <Data Name="ProcessId">10044</Data>
+    <Data Name="Image">C:\Windows\explorer.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\mchen\</Data>
+    <Data Name="User">SCFS\mchen</Data>
+    <Data Name="ParentProcessGuid">{fec7130c-3f58-42d1-96f6-cea2450328ab}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:35:05.0000000Z" />
+    <EventRecordID>45</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 11:35:05.000</Data>
+    <Data Name="ProcessGuid">{89e93462-8e1b-46f8-ae18-8c47f061980d}</Data>
+    <Data Name="ProcessId">10045</Data>
+    <Data Name="Image">C:\Windows\explorer.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{2bc3e944-6810-4d9c-9c6c-4e2fb7362943}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:39:05.0000000Z" />
+    <EventRecordID>46</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 11:39:05.000</Data>
+    <Data Name="ProcessGuid">{2f470e56-1e6a-425b-9a3f-1922ed84c36e}</Data>
+    <Data Name="ProcessId">10046</Data>
+    <Data Name="Image">C:\Windows\explorer.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\jsmith\</Data>
+    <Data Name="User">SCFS\jsmith</Data>
+    <Data Name="ParentProcessGuid">{19f0ffc8-39ca-4c50-b78e-4755e81b149a}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:44:05.0000000Z" />
+    <EventRecordID>47</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 11:44:05.000</Data>
+    <Data Name="ProcessGuid">{803c7de3-f775-4c4b-a2f1-5d4716edad34}</Data>
+    <Data Name="ProcessId">10047</Data>
+    <Data Name="Image">C:\Windows\explorer.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{65ca96d2-26ca-4a3c-ac6e-60bb270b8d00}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:50:05.0000000Z" />
+    <EventRecordID>48</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 11:50:05.000</Data>
+    <Data Name="ProcessGuid">{9902478c-0740-40fc-ba87-f6e7b13e72d2}</Data>
+    <Data Name="ProcessId">10048</Data>
+    <Data Name="Image">C:\Windows\explorer.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\jsmith\</Data>
+    <Data Name="User">SCFS\jsmith</Data>
+    <Data Name="ParentProcessGuid">{a1476193-9431-4687-8b86-86148fb2da83}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:53:05.0000000Z" />
+    <EventRecordID>49</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 11:53:05.000</Data>
+    <Data Name="ProcessGuid">{06eb1fc7-cc2b-4ddf-8ea6-592f08545996}</Data>
+    <Data Name="ProcessId">10049</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c whoami &amp;&amp; net user &amp;&amp; ipconfig /all</Data>
+    <Data Name="CurrentDirectory">C:\Windows\System32\</Data>
+    <Data Name="User">SCFS\svc_backup</Data>
+    <Data Name="ParentProcessGuid">{72de1bb2-fab4-40ff-b32b-f6b792f60b4b}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\svchost.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:53:15.0000000Z" />
+    <EventRecordID>50</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 11:53:15.000</Data>
+    <Data Name="ProcessGuid">{acee2860-04ce-44d1-abce-9055ecd798f6}</Data>
+    <Data Name="ProcessId">10050</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="CommandLine">powershell -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQA</Data>
+    <Data Name="CurrentDirectory">C:\Windows\System32\</Data>
+    <Data Name="User">SCFS\svc_backup</Data>
+    <Data Name="ParentProcessGuid">{06eb1fc7-cc2b-4ddf-8ea6-592f08545996}</Data>
+    <Data Name="ParentImage">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="ParentCommandLine">cmd.exe /c whoami &amp;&amp; net user &amp;&amp; ipconfig /all</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>3</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:53:30.0000000Z" />
+    <EventRecordID>51</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 11:53:30.000</Data>
+    <Data Name="ProcessGuid">{acee2860-04ce-44d1-abce-9055ecd798f6}</Data>
+    <Data Name="Image">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="User">SCFS\svc_backup</Data>
+    <Data Name="Protocol">tcp</Data>
+    <Data Name="SourceIp">10.20.0.101</Data>
+    <Data Name="SourcePort">49512</Data>
+    <Data Name="DestinationIp">203.0.113.44</Data>
+    <Data Name="DestinationPort">8443</Data>
+    <Data Name="DestinationHostname" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>10</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:54:20.0000000Z" />
+    <EventRecordID>52</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 11:54:20.000</Data>
+    <Data Name="SourceProcessGUID">{acee2860-04ce-44d1-abce-9055ecd798f6}</Data>
+    <Data Name="SourceProcessId">12876</Data>
+    <Data Name="SourceThreadId">23480</Data>
+    <Data Name="SourceImage">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Data>
+    <Data Name="TargetProcessGUID">{6a65500b-f43b-417a-82be-21a4775de884}</Data>
+    <Data Name="TargetProcessId">988</Data>
+    <Data Name="TargetImage">C:\Windows\System32\lsass.exe</Data>
+    <Data Name="GrantedAccess">0x1fffff</Data>
+    <Data Name="CallTrace">C:\Windows\SYSTEM32\ntdll.dll+9d8e4|...</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>1102</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:56:20.0000000Z" />
+    <EventRecordID>53</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-DC01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T11:58:20.0000000Z" />
+    <EventRecordID>54</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 11:58:20.000</Data>
+    <Data Name="ProcessGuid">{06c5945f-8fa1-446e-b289-e4d70392f723}</Data>
+    <Data Name="ProcessId">10054</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\jsmith\</Data>
+    <Data Name="User">SCFS\jsmith</Data>
+    <Data Name="ParentProcessGuid">{22e71c5e-af07-47d1-884c-f15b8b71286f}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:04:20.0000000Z" />
+    <EventRecordID>55</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:04:20.000</Data>
+    <Data Name="ProcessGuid">{285f1a58-036a-4d27-9f50-bd5333838f41}</Data>
+    <Data Name="ProcessId">10055</Data>
+    <Data Name="Image">C:\Windows\System32\notepad.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\mchen\</Data>
+    <Data Name="User">SCFS\mchen</Data>
+    <Data Name="ParentProcessGuid">{4b418dbc-50a4-47a6-b2a9-b6ef7cd7525b}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:08:20.0000000Z" />
+    <EventRecordID>56</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:08:20.000</Data>
+    <Data Name="ProcessGuid">{091b1a79-7b63-44e4-8216-8c7ca5f45f9b}</Data>
+    <Data Name="ProcessId">10056</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\agarcia\</Data>
+    <Data Name="User">SCFS\agarcia</Data>
+    <Data Name="ParentProcessGuid">{7889d0fa-d676-4fc0-893f-8b01f9c83460}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:12:20.0000000Z" />
+    <EventRecordID>57</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:12:20.000</Data>
+    <Data Name="ProcessGuid">{07ffc75f-1732-4ca5-82b0-e1f015678289}</Data>
+    <Data Name="ProcessId">10057</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\jsmith\</Data>
+    <Data Name="User">SCFS\jsmith</Data>
+    <Data Name="ParentProcessGuid">{0ec4e7b1-8953-4059-a861-a39c34b7c34c}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:14:20.0000000Z" />
+    <EventRecordID>58</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:14:20.000</Data>
+    <Data Name="ProcessGuid">{7d290bb1-fc91-40bd-8c97-acaf894261d3}</Data>
+    <Data Name="ProcessId">10058</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\jsmith\</Data>
+    <Data Name="User">SCFS\jsmith</Data>
+    <Data Name="ParentProcessGuid">{ba7ed08d-0f81-4701-a4ac-519f5bb225d0}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:19:20.0000000Z" />
+    <EventRecordID>59</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:19:20.000</Data>
+    <Data Name="ProcessGuid">{05a58f26-39d8-4f1a-abfd-13eefea62133}</Data>
+    <Data Name="ProcessId">10059</Data>
+    <Data Name="Image">C:\Windows\System32\notepad.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\mchen\</Data>
+    <Data Name="User">SCFS\mchen</Data>
+    <Data Name="ParentProcessGuid">{f17b9f18-47c6-4a1a-9b88-cdef08b211de}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:23:20.0000000Z" />
+    <EventRecordID>60</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:23:20.000</Data>
+    <Data Name="ProcessGuid">{21ea5162-2d48-4cbf-9156-724936f3dbab}</Data>
+    <Data Name="ProcessId">10060</Data>
+    <Data Name="Image">C:\Windows\System32\notepad.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\agarcia\</Data>
+    <Data Name="User">SCFS\agarcia</Data>
+    <Data Name="ParentProcessGuid">{3402a68b-87ce-45c4-a61a-b2fdda6652b2}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:25:20.0000000Z" />
+    <EventRecordID>61</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:25:20.000</Data>
+    <Data Name="ProcessGuid">{96a4fd76-1927-4d9f-8440-241c98dfb308}</Data>
+    <Data Name="ProcessId">10061</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\mchen\</Data>
+    <Data Name="User">SCFS\mchen</Data>
+    <Data Name="ParentProcessGuid">{fcc267ed-9488-4201-83e1-ec849491e783}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:29:20.0000000Z" />
+    <EventRecordID>62</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:29:20.000</Data>
+    <Data Name="ProcessGuid">{b791ab8f-859e-4300-9649-071222878e63}</Data>
+    <Data Name="ProcessId">10062</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\agarcia\</Data>
+    <Data Name="User">SCFS\agarcia</Data>
+    <Data Name="ParentProcessGuid">{a80002df-057e-4756-8f45-fedd693ffc01}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:34:20.0000000Z" />
+    <EventRecordID>63</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:34:20.000</Data>
+    <Data Name="ProcessGuid">{7d23059c-57b2-4a67-b307-2c8b92faff1d}</Data>
+    <Data Name="ProcessId">10063</Data>
+    <Data Name="Image">C:\Windows\System32\notepad.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{03a50f02-45c9-4c0d-86c8-4dd0f6cdef99}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:39:20.0000000Z" />
+    <EventRecordID>64</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:39:20.000</Data>
+    <Data Name="ProcessGuid">{b2a5a59d-959e-469b-b61e-e8712fc4968f}</Data>
+    <Data Name="ProcessId">10064</Data>
+    <Data Name="Image">C:\Windows\System32\notepad.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\jsmith\</Data>
+    <Data Name="User">SCFS\jsmith</Data>
+    <Data Name="ParentProcessGuid">{323f3c15-3bdb-4e6e-b211-226b38787a72}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:45:20.0000000Z" />
+    <EventRecordID>65</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:45:20.000</Data>
+    <Data Name="ProcessGuid">{a638981c-e258-4d41-b925-bb9341383667}</Data>
+    <Data Name="ProcessId">10065</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\mchen\</Data>
+    <Data Name="User">SCFS\mchen</Data>
+    <Data Name="ParentProcessGuid">{a2dc30c9-36a2-4932-bae3-07997f1868c4}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:48:20.0000000Z" />
+    <EventRecordID>66</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:48:20.000</Data>
+    <Data Name="ProcessGuid">{47ca8ef4-2bb9-4417-97e9-6bddd2adf215}</Data>
+    <Data Name="ProcessId">10066</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\mchen\</Data>
+    <Data Name="User">SCFS\mchen</Data>
+    <Data Name="ParentProcessGuid">{01d06332-104c-46b9-8635-6485bddee19e}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:52:20.0000000Z" />
+    <EventRecordID>67</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:52:20.000</Data>
+    <Data Name="ProcessGuid">{18958fb7-ae9c-4175-8a0a-797e4768f823}</Data>
+    <Data Name="ProcessId">10067</Data>
+    <Data Name="Image">C:\Windows\System32\notepad.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\mchen\</Data>
+    <Data Name="User">SCFS\mchen</Data>
+    <Data Name="ParentProcessGuid">{c1694967-a32e-4db7-bc0b-00a93ffec14b}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T12:56:20.0000000Z" />
+    <EventRecordID>68</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 12:56:20.000</Data>
+    <Data Name="ProcessGuid">{b1c65b76-114b-46f7-8387-657aea3d982b}</Data>
+    <Data Name="ProcessId">10068</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\jsmith\</Data>
+    <Data Name="User">SCFS\jsmith</Data>
+    <Data Name="ParentProcessGuid">{7079c6a0-ce6e-47ae-853e-a30e21983b89}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T13:02:20.0000000Z" />
+    <EventRecordID>69</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 13:02:20.000</Data>
+    <Data Name="ProcessGuid">{b1e66f51-5932-42ac-b216-831a72ebaa26}</Data>
+    <Data Name="ProcessId">10069</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\mchen\</Data>
+    <Data Name="User">SCFS\mchen</Data>
+    <Data Name="ParentProcessGuid">{d83acf51-4038-416d-b5fd-600adf6de1d5}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T13:07:20.0000000Z" />
+    <EventRecordID>70</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 13:07:20.000</Data>
+    <Data Name="ProcessGuid">{2af65cc1-79db-47d4-be00-cd5a241a910a}</Data>
+    <Data Name="ProcessId">10070</Data>
+    <Data Name="Image">C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\agarcia\</Data>
+    <Data Name="User">SCFS\agarcia</Data>
+    <Data Name="ParentProcessGuid">{9860983a-7640-4cfb-98c2-28cd550a6423}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T13:11:20.0000000Z" />
+    <EventRecordID>71</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 13:11:20.000</Data>
+    <Data Name="ProcessGuid">{deb52b0a-587b-44a5-82ca-5af16049fa5c}</Data>
+    <Data Name="ProcessId">10071</Data>
+    <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+    <Data Name="CommandLine" />
+    <Data Name="CurrentDirectory">C:\Users\rpatel\</Data>
+    <Data Name="User">SCFS\rpatel</Data>
+    <Data Name="ParentProcessGuid">{5c3f91ed-b2d2-40c7-a777-cfe1a7a583e1}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T13:16:20.0000000Z" />
+    <EventRecordID>72</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mchen</Data>
+    <Data Name="IpAddress">10.20.0.1003</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T13:22:20.0000000Z" />
+    <EventRecordID>73</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">10.20.0.1001</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T13:25:20.0000000Z" />
+    <EventRecordID>74</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">10.20.0.1001</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T13:30:20.0000000Z" />
+    <EventRecordID>75</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mchen</Data>
+    <Data Name="IpAddress">10.20.0.1003</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T13:36:20.0000000Z" />
+    <EventRecordID>76</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mchen</Data>
+    <Data Name="IpAddress">10.20.0.1003</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T13:41:20.0000000Z" />
+    <EventRecordID>77</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">agarcia</Data>
+    <Data Name="IpAddress">10.20.0.1002</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T13:46:20.0000000Z" />
+    <EventRecordID>78</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">agarcia</Data>
+    <Data Name="IpAddress">10.20.0.1002</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T13:51:20.0000000Z" />
+    <EventRecordID>79</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mchen</Data>
+    <Data Name="IpAddress">10.20.0.1003</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T13:56:20.0000000Z" />
+    <EventRecordID>80</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mchen</Data>
+    <Data Name="IpAddress">10.20.0.1003</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:02:20.0000000Z" />
+    <EventRecordID>81</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-FS01</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">10.20.0.1001</Data>
+    <Data Name="LogonType">3</Data>
+    <Data Name="LogonProcessName">NtLmSsp</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:06:20.0000000Z" />
+    <EventRecordID>82</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">jsmith</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:14:20.0000000Z" />
+    <EventRecordID>83</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">agarcia</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:19:20.0000000Z" />
+    <EventRecordID>84</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">mchen</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:25:20.0000000Z" />
+    <EventRecordID>85</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Security</Channel>
+    <Computer>WIN-PC004</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">rpatel</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="LogonProcessName">User32</Data>
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:31:20.0000000Z" />
+    <EventRecordID>86</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 14:31:20.000</Data>
+    <Data Name="ProcessGuid">{d97115a1-06ff-48ac-99ea-d26890cd5a91}</Data>
+    <Data Name="ProcessId">10086</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c dir</Data>
+    <Data Name="CurrentDirectory">C:\Users\agarcia\</Data>
+    <Data Name="User">SCFS\agarcia</Data>
+    <Data Name="ParentProcessGuid">{13e1a6c0-e6be-4dbb-88be-76530daeafe6}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:35:20.0000000Z" />
+    <EventRecordID>87</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 14:35:20.000</Data>
+    <Data Name="ProcessGuid">{298484f0-fb12-4730-bfe9-92f97552899f}</Data>
+    <Data Name="ProcessId">10087</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c dir</Data>
+    <Data Name="CurrentDirectory">C:\Users\agarcia\</Data>
+    <Data Name="User">SCFS\agarcia</Data>
+    <Data Name="ParentProcessGuid">{5feb9e08-e191-4776-85ff-3321f2519e1c}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:39:20.0000000Z" />
+    <EventRecordID>88</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 14:39:20.000</Data>
+    <Data Name="ProcessGuid">{b552c324-c32a-43e4-b13d-ebe73018ccd4}</Data>
+    <Data Name="ProcessId">10088</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c dir</Data>
+    <Data Name="CurrentDirectory">C:\Users\agarcia\</Data>
+    <Data Name="User">SCFS\agarcia</Data>
+    <Data Name="ParentProcessGuid">{3871994e-6710-4767-94b8-9b7a29652020}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:44:20.0000000Z" />
+    <EventRecordID>89</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC001</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 14:44:20.000</Data>
+    <Data Name="ProcessGuid">{47b3fd91-f75a-48e3-bca0-a655fad1fbec}</Data>
+    <Data Name="ProcessId">10089</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c dir</Data>
+    <Data Name="CurrentDirectory">C:\Users\jsmith\</Data>
+    <Data Name="User">SCFS\jsmith</Data>
+    <Data Name="ParentProcessGuid">{83ce0820-3682-4e41-b71b-c62062bb7c64}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:46:20.0000000Z" />
+    <EventRecordID>90</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 14:46:20.000</Data>
+    <Data Name="ProcessGuid">{303e6380-5f65-4e99-bb28-f705690e8bd0}</Data>
+    <Data Name="ProcessId">10090</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c dir</Data>
+    <Data Name="CurrentDirectory">C:\Users\mchen\</Data>
+    <Data Name="User">SCFS\mchen</Data>
+    <Data Name="ParentProcessGuid">{80f8e510-9e99-44e8-97ff-72fb45b6b75b}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:50:20.0000000Z" />
+    <EventRecordID>91</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 14:50:20.000</Data>
+    <Data Name="ProcessGuid">{b9562cbf-f3ac-4a05-bbac-ece30665e6b4}</Data>
+    <Data Name="ProcessId">10091</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c dir</Data>
+    <Data Name="CurrentDirectory">C:\Users\agarcia\</Data>
+    <Data Name="User">SCFS\agarcia</Data>
+    <Data Name="ParentProcessGuid">{c8b43080-2e7f-4a7c-9c1d-9190a619a30b}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:55:20.0000000Z" />
+    <EventRecordID>92</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC002</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 14:55:20.000</Data>
+    <Data Name="ProcessGuid">{b82899a6-3a85-4808-9d90-58ea10117243}</Data>
+    <Data Name="ProcessId">10092</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c dir</Data>
+    <Data Name="CurrentDirectory">C:\Users\agarcia\</Data>
+    <Data Name="User">SCFS\agarcia</Data>
+    <Data Name="ParentProcessGuid">{104d40b6-4317-4eab-95e9-5289c5ff63a9}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385f-c22a-43e0-bf4c-06f5698ffbd9}" />
+    <EventID>1</EventID>
+    <Version>1</Version>
+    <Level>4</Level>
+    <Task>1</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8000000000000000</Keywords>
+    <TimeCreated SystemTime="2026-03-20T14:57:20.0000000Z" />
+    <EventRecordID>93</EventRecordID>
+    <Correlation />
+    <Execution ProcessID="600" ThreadID="700" />
+    <Channel>Microsoft-Windows-Sysmon/Operational</Channel>
+    <Computer>WIN-PC003</Computer>
+    <Security UserID="S-1-5-18" />
+  </System>
+  <EventData>
+    <Data Name="UtcTime">2026-03-20 14:57:20.000</Data>
+    <Data Name="ProcessGuid">{c416741e-2b68-4d92-b9c6-1576c3383e2a}</Data>
+    <Data Name="ProcessId">10093</Data>
+    <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+    <Data Name="CommandLine">cmd.exe /c dir</Data>
+    <Data Name="CurrentDirectory">C:\Users\mchen\</Data>
+    <Data Name="User">SCFS\mchen</Data>
+    <Data Name="ParentProcessGuid">{6b91dd44-d954-494e-a014-2e5f3767c368}</Data>
+    <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    <Data Name="ParentCommandLine" />
+  </EventData>
+</Event>
+</Events>
