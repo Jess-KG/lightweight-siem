@@ -23,7 +23,7 @@ from .generic_rules import detect_count_threshold_breach, detect_distinct_count_
 
 PRIVILEGED_GROUPS = ["Administrators", "Domain Admins", "Enterprise Admins", "Schema Admins"]
 DEFAULT_ACCOUNTS = ["Guest", "Administrator", "DefaultAccount"]
-EXPECTED_INTERACTIVE_ACCOUNTS = ["user1", "user2"]
+EXPECTED_INTERACTIVE_ACCOUNTS = ["user1", "user2", "tlee", "pgomez", "jsmith"]
 NOISE_ACCOUNTS = ["SYSTEM", "LOCAL SERVICE", "NETWORK SERVICE"]
 # ---- Group 1: failed logon volume patterns ----
 
@@ -108,19 +108,19 @@ def detect_network_logon(events):
 
     return alerts
 
-def detect_interactive_logon_unexpected_account(events):
-    alerts = []
-    for e in events:
-        if e.get("type") == "successful_logon" and e.get("logon_type") == "2":
-            actor = e.get("actor")
-            if EXPECTED_INTERACTIVE_ACCOUNTS and actor not in EXPECTED_INTERACTIVE_ACCOUNTS:
-                alerts.append({
-                    "rule": "interactive_logon_unexpected_account", "severity": "medium",
-                    "timestamp": e.get("timestamp"), "computer": e.get("computer"),
-                    "message": f"Unexpected interactive logon by '{actor}'",
-                    "event" : e
-                })
-    return alerts
+# def detect_interactive_logon_unexpected_account(events):
+#     alerts = []
+#     for e in events:
+#         if e.get("type") == "successful_logon" and e.get("logon_type") == "2":
+#             actor = e.get("actor")
+#             if EXPECTED_INTERACTIVE_ACCOUNTS and actor not in EXPECTED_INTERACTIVE_ACCOUNTS:
+#                 alerts.append({
+#                     "rule": "interactive_logon_unexpected_account", "severity": "medium",
+#                     "timestamp": e.get("timestamp"), "computer": e.get("computer"),
+#                     "message": f"Unexpected interactive logon by '{actor}'",
+#                     "event" : e
+#                 })
+#     return alerts
 
 def detect_explicit_credential_usage(events):
     alerts = []
@@ -288,7 +288,7 @@ def run_detections(events):
         # detect_unusual_logon_type,
         detect_rdp_logon,
         detect_network_logon,
-        detect_interactive_logon_unexpected_account,
+        # detect_interactive_logon_unexpected_account,
         detect_explicit_credential_usage,
         detect_privileged_account_login,
         detect_disabled_account_auth_attempt,
