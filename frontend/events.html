@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/style_1.css">
+    <link rel="stylesheet" href="/static/css/style_2.css">
     <title>Event Viewer | SIEM</title>
 </head>
 
@@ -51,58 +52,83 @@
 
     </main>
 
-<script>
-    let allEvents = []
+    <div id="alert-modal-overlay" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span id="modal-title">Alert Details</span>
+                <button id="modal-close-btn" class="modal-close-btn">&times;</button>
+            </div>
 
-    async function loadEvents(){
-        let response = await fetch("/api/events");
-        let data = await response.json();
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h4>Summary</h4>
+                    <table class="modal-table" id="modal-summary-table"></table>
+                </div>
 
-        allEvents = data.events;
+                <div class="modal-section">
+                    <h4>Normalized Event Fields</h4>
+                    <table class="modal-table" id="modal-normalized-table"></table>
+                </div>
 
-        document.getElementById("total-count").innerText = data.total;
+                <div class="modal-section">
+                    <h4>Raw Event Data</h4>
+                    <pre id="modal-raw-data"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let allEvents = []
 
-        fillTypeDropDown();
-        showEvents(allEvents);
-    }
+        async function loadEvents() {
+            let response = await fetch("/api/events");
+            let data = await response.json();
 
-    function fillTypeDropDown(){
-        let types = [];
-        const type_select = document.getElementById("type-select");
-        
-        for (let i = 0; i < allEvents.length; i++){
-            let t = allEvents[i].type;
-            if (!types.includes(t)){
-                types.push(t);
+            allEvents = data.events;
+
+            document.getElementById("total-count").innerText = data.total;
+
+            fillTypeDropDown();
+            showEvents(allEvents);
+        }
+
+        function fillTypeDropDown() {
+            let types = [];
+            const type_select = document.getElementById("type-select");
+
+            for (let i = 0; i < allEvents.length; i++) {
+                let t = allEvents[i].type;
+                if (!types.includes(t)) {
+                    types.push(t);
+                }
+            }
+
+            for (let i = 0; i < types.length; i++) {
+                let option = document.createElement("option");
+                option.value = types[i];
+                option.innerText = types[i];
+                type_select.appendChild(option);
             }
         }
 
-        for (let i = 0; i < types.length; i++){
-            let option = document.createElement("option");
-            option.value = types[i];
-            option.innerText = types[i];
-            type_select.appendChild(option);
-        }
-    }
+        //showing all the vents now
 
-    //showing all the vents now
+        function showEvents(events) {
+            const tbody = document.getElementById("table-body");
+            tbody.innerHTML = "";
 
-    function showEvents(events){
-        const tbody = document.getElementById("table-body");
-        tbody.innerHTML = "";
+            document.getElementById("showing-count").innerText = events.length;
 
-        document.getElementById("showing-count").innerText = events.length;
+            if (events.length == 0) {
+                tbody.innerHTML = "<tr><td colspan = '6'>NO DATA FOUND</td></tr>";
+                return;
+            }
 
-        if (events.length == 0){
-            tbody.innerHTML = "<tr><td colspan = '6'>NO DATA FOUND</td></tr>";
-            return;
-        }
+            for (let i = 0; i < events.length; i++) {
+                let e = events[i];
 
-        for (let i = 0; i < events.length; i++) {
-        let e = events[i];
- 
-        let row = document.createElement("tr");
-        row.innerHTML = `
+                let row = document.createElement("tr");
+                row.innerHTML = `
           <td>${e.timestamp || "-"}</td>
           <td>${e.type || "-"}</td>
           <td>${e.actor || "-"}</td>
@@ -110,41 +136,102 @@
           <td>${e.computer || "-"}</td>
           <td>${e.source_ip || "-"}</td>
         `;
-        tbody.appendChild(row);
-      }
-    }
+                row.addEventListener("click", function () {
+                    openEventModel(e);
+                });
+                tbody.appendChild(row);
+            }
+        }
 
-    function applyFilters() {
-      const searchText = document.getElementById("search-box").value.toLowerCase();
-      const selectedType = document.getElementById("type-select").value;
- 
-      let filtered = [];
- 
-      for (let i = 0; i < allEvents.length; i++) {
-        let e = allEvents[i];
- 
-        if (selectedType !== "" && e.type !== selectedType) {
-          continue;
+        function applyFilters() {
+            const searchText = document.getElementById("search-box").value.toLowerCase();
+            const selectedType = document.getElementById("type-select").value;
+
+            let filtered = [];
+
+            for (let i = 0; i < allEvents.length; i++) {
+                let e = allEvents[i];
+
+                if (selectedType !== "" && e.type !== selectedType) {
+                    continue;
+                }
+
+                // check the search text against a few fields
+                let combined = (e.actor || "") + " " + (e.computer || "") + " " + (e.source_ip || "") + " " + (e.target_account || "");
+                combined = combined.toLowerCase();
+
+                if (searchText !== "" && !combined.includes(searchText)) {
+                    continue;
+                }
+
+                filtered.push(e);
+            }
+
+            filtered.sort(function (a, b) {
+                return new Date(b.timestamp) - new Date(a.timestamp);
+            });
+            showEvents(filtered);
         }
- 
-        // check the search text against a few fields
-        let combined = (e.actor || "") + " " + (e.computer || "") + " " + (e.source_ip || "") + " " + (e.target_account || "");
-        combined = combined.toLowerCase();
- 
-        if (searchText !== "" && !combined.includes(searchText)) {
-          continue;
+
+
+        function openEventModel(event) {
+            document.getElementById("modal-title").innerText = event.type || "Event Details";
+
+            const summaryTable = document.getElementById("modal-summary-table");
+            summaryTable.innerHTML = `
+        <tr><td>Type</td><td>${event.type || "-"}</td></tr>
+        <tr><td>Timestamp</td><td>${event.timestamp || "-"}</td></tr>
+        <tr><td>Computer</td><td>${event.computer || "-"}</td></tr>
+    `;
+
+            // normalized fields: everything on the event except "data"
+            const normalizedTable = document.getElementById("modal-normalized-table");
+            normalizedTable.innerHTML = "";
+            let hasFields = false;
+
+            for (let key in event) {
+                if (key === "data") continue;
+                if (event[key] === null || event[key] === undefined || event[key] === "") continue;
+                hasFields = true;
+                let row = document.createElement("tr");
+                row.innerHTML = `<td>${key}</td><td>${event[key]}</td>`;
+                normalizedTable.appendChild(row);
+            }
+
+            if (!hasFields) {
+                normalizedTable.innerHTML = "<tr><td colspan='2'>No normalized fields available</td></tr>";
+            }
+
+            const rawDataBox = document.getElementById("modal-raw-data");
+            if (event.data && Object.keys(event.data).length > 0) {
+                rawDataBox.innerText = JSON.stringify(event.data, null, 2);
+            } else {
+                rawDataBox.innerText = "No raw data available for this event.";
+            }
+
+            document.getElementById("alert-modal-overlay").classList.add("modal-visible");
         }
- 
-        filtered.push(e);
-      }
- 
-      showEvents(filtered);
-    }
-    document.getElementById("search-box").addEventListener("input", applyFilters);
-    document.getElementById("type-select").addEventListener("change", applyFilters);
- 
-    loadEvents();
-</script>
+
+        function closeEventModel() {
+            document.getElementById("alert-modal-overlay").classList.remove("modal-visible");
+        }
+
+        document.getElementById("modal-close-btn").addEventListener("click", closeEventModel);
+
+        // click the dark background outside the box to close it too
+        document.getElementById("alert-modal-overlay").addEventListener("click", function (e) {
+            if (e.target === this) closeEventModel();
+        });
+
+        // Escape key closes it
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") closeEventModel();
+        });
+        document.getElementById("search-box").addEventListener("input", applyFilters);
+        document.getElementById("type-select").addEventListener("change", applyFilters);
+
+        loadEvents();
+    </script>
 </body>
 
 </html>
