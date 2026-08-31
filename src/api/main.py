@@ -34,7 +34,7 @@ def get_events():
     print("STARTED EVENTS")
     raw_events = list(
         load_test_events(
-            "C:\\Users\\grewa\\Documents\\GitHub\\lightweight-siem\\Simulation_2\\file1.xml"
+            "C:\\Users\\grewa\\Documents\\GitHub\\lightweight-siem\\Simulation_2\\file3.xml"
         )
     )
 
@@ -53,7 +53,7 @@ def get_events():
 
 @app.get("/api/alerts")
 def get_alerts():
-    raw_events = list(load_test_events("C:\\Users\\grewa\\Documents\\GitHub\\lightweight-siem\\Simulation_2\\file1.xml"))
+    raw_events = list(load_test_events("C:\\Users\\grewa\\Documents\\GitHub\\lightweight-siem\\Simulation_2\\file3.xml"))
 
     normalized_events = []
 

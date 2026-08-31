@@ -1,0 +1,41 @@
+INVESTIGATION NOTES
+
+Case Reference: CASE-02
+Analyst: Jas
+Date Opened: 8/31/2026 
+
+Scope so far:
+  Accounts involved: admin01, svc_backup
+  Systems involved: WIN-DC01
+  Time window: 2026-03-20T11:18:35
+
+High-confidence conclusion: A brute force attack on svc_backup has led to the compromise of the account, 
+and a network connection was established with an external account from svc_backup.
+
+| Timestamp           | System   | Account    | Event                              | Notes                                                                                                                                                                                                    |
+| ------------------- | -------- | ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-03-20T11:18:35 | WIN-DC01 | admin01    | brute_force_attack                 | 11 failed logon attempts against `admin01` within 5 minutes. Activity originated from suspicious source IP `203.0.113.44`.                                                                               |
+| 2026-03-20T11:20:35 | WIN-DC01 | admin01    | multiple_failed_logons_same_source | 12 failed logon events from source IP `203.0.113.44` within 10 minutes, indicating repeated authentication attempts.                                                                                     |
+| 2026-03-20T11:21:05 | WIN-DC01 | svc_backup | network_logon                      | Successful network logon by `svc_backup` from `203.0.113.44`, shortly after the failed authentication attempts from the same source.                                                                     |
+| 2026-03-20T11:53:05 | WIN-DC01 | Unknown    | system_process_unusual_child       | `svchost.exe` spawned unexpected child process `cmd.exe`, indicating potentially suspicious command execution.                                                                                           |
+| 2026-03-20T11:53:15 | WIN-DC01 | Unknown    | suspicious_command_line_flag       | `powershell.exe` was executed using the suspicious `-enc` command-line flag.                                                                                                                             |
+| 2026-03-20T11:53:15 | WIN-DC01 | Unknown    | encoded_powershell_command         | PowerShell executed an encoded command using `-enc`, potentially attempting to conceal the executed instructions.                                                                                        |
+| 2026-03-20T11:53:30 | WIN-DC01 | Unknown    | powershell_followed_by_network     | PowerShell activity was followed within 15 seconds by a network connection to `203.0.113.44:8443`. This IP was also responsible for the earlier failed logon attempts and successful `svc_backup` logon. |
+
+A brute force attack was attempted on admin01. On failure, svc_backup was tried for the same.
+A successful network logon from an external IP address shows that the brute force attempt was successful.
+svc_backup.exe ran cmd.exe, which spwaned powershell using encrypted flags.
+This was followed by a tcp connection to the same external IP address.
+
+Open Questions:
+-> What level of exposure has been there?
+-> Are there any other systems compromised?
+
+Evidence Supporting Hypothesis:
+1. Brute force attempt by external accounts.
+2. Network connection followed encrypted powersell commands run by the compromised account.
+
+
+Evidence Against / Alternative Explanations:
+1. Was there a legitimate reason for admin01 to connect to the external network?
+2. Could the password failures have been legitimate?
